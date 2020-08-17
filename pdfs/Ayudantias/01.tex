@@ -1,0 +1,179 @@
+\documentclass{ayudantia}
+
+\title{Ayudantía 01}
+\date{2020-08-19}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+\ifx\condition\undefined
+\def\condition{1}
+\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+%'pdflatex -interaction=nonstopmode -synctex=1 -shell-escape -jobname="Enunciado"\jobname -output-directory="../Enunciados" "\gdef\string\condition{0} \string\input\space\jobname"; 
+%'pdflatex -interaction=nonstopmode -synctex=1 -shell-escape -jobname="Solución"\jobname -output-directory="../Soluciones" "\gdef\string\condition{0} \string\input\space\jobname"; 
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Demuestre que \(-a=(-1)\cdot a\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se nota que es suficiente demostrar que \(a+((-1)\cdot a)=0\), ya que el lado izquierdo de la ecuación es el inverso aditivo de \(a\). Para esto, veamos que
+        \begin{align*}
+            a+((-1)\cdot a)&=(1\cdot a)+((-1)\cdot a)\\
+            &=(1+(-1))\cdot a\\
+            &=0\cdot a\\
+            &=0\\
+        \end{align*}
+        Con lo que se tiene que \(-a=(-1)\cdot a\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre que si \(a\neq0\) entonces \(-(a^{-1})=(-a)^{-1}\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Notemos que el lado derecho es el inverso multiplicativo de \((-a)\), por lo que basta ver que el lado izquierdo multiplicado por \((-a)\) da \(1\). Para esto, veamos que
+        \begin{align*}
+            (-a)\cdot-(a)^{-1} & = ((-1)\cdot a)\cdot((-1)\cdot a^{-1})\\
+            & = ((-1)\cdot a)\cdot((-1)\cdot a^{-1})\\
+            & = (a\cdot (-1))\cdot((-1)\cdot a^{-1})\\
+            & = a\cdot ((-1)\cdot((-1)\cdot a^{-1}))\\
+            & = a\cdot (((-1)\cdot(-1))\cdot a^{-1})\\
+            & = a\cdot (1\cdot a^{-1})\\
+            & = a\cdot  a^{-1}\\
+            & = 1\\
+        \end{align*}
+        Para ver que \((-1)\cdot(-1)=1\) es suficiente ver el siguiente desarrollo
+        \begin{align*}
+            0=(-1)\cdot 0&\iff 0=(-1)\cdot(1+(-1))\\
+            &\iff 0=((-1)\cdot 1)+((-1)\cdot(-1))\\
+            &\iff 0=(-1)+((-1)\cdot(-1))\\
+            &\iff 1=1+((-1)+((-1)\cdot(-1)))\\
+            &\iff 1=(1+(-1))+((-1)\cdot(-1))\\
+            &\iff 1=0+((-1)\cdot(-1))\\
+            &\iff 1=(-1)\cdot(-1)\\
+        \end{align*}
+        Con lo anterior se tiene que \(-(a^{-1})=(-a)^{-1}\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    (I1 2019) Sean \(a,b,c,d\) cuatro reales tales que
+    \begin{equation*}
+        ad\neq bc
+    \end{equation*}
+    Pruebe que si \(x,y\) son reales tales que
+    \begin{align*}
+        ax+by=0\quad\text{y}\quad cx+dy=0
+    \end{align*}
+    entonces \(x=y=0\).\\
+    \textit{\textbf{Hint:} Muestre que \((ad)x=(bc)x\) para concluír que \(x=0\).}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se nota que no se puede tener que \(ad=0=bc\), por lo que s.p.d.g. \(ad\neq0\), lo que nos dice que \(a\neq0\) y \(d\neq0\). Ahora, se multiplica la primera ecuación por \(d\):
+        \begin{align*}
+            d\cdot(ax+by)=d\cdot 0&\iff (d\cdot(ax))+(d\cdot(by))=0\\
+            &\iff ((da)\cdot x)+((db)\cdot y)=0\\
+            &\iff ((ad)\cdot x)+((bd)\cdot y)=0\\
+            &\iff ((ad)\cdot x)+(b\cdot(dy))=0\\
+            &\iff ((ad)\cdot x)+(b\cdot(-cx))=0\\
+            &\iff ((ad)\cdot x)+(b\cdot((-1)\cdot(cx)))=0\\
+            &\iff ((ad)\cdot x)+((b\cdot(-1))\cdot(cx))=0\\
+            &\iff ((ad)\cdot x)+(((-1)\cdot b)\cdot(cx))=0\\
+            &\iff ((ad)\cdot x)+((-1)\cdot (b\cdot(cx)))=0\\
+            &\iff ((ad)\cdot x)+((-1)\cdot (b\cdot(cx)))=0\\
+            &\iff ((ad)\cdot x)+(-((bc)\cdot x))=0\\
+            &\iff ((ad)\cdot x)+(-((bc)\cdot x))+((bc)\cdot x)=0+((bc)\cdot x)\\
+            &\iff ((ad)\cdot x)+0=(bc)\cdot x\\
+            &\iff (ad)\cdot x=(bc)\cdot x\\
+        \end{align*}
+        Ahora si \(x\neq0\) entonces existe \(x^{-1}\) tal que \(x\cdot x^{-1}=1\), por lo que
+        \begin{align*}
+            ((ad)\cdot x)\cdot x^{-1}=((bc)\cdot x)\cdot x^{-1}&\iff (ad)\cdot (x\cdot x^{-1})=(bc)\cdot (x\cdot x^{-1})\\
+            &\iff (ad)\cdot1=(bc)\cdot1\\
+            &\iff ad=bc\\
+        \end{align*}
+        Lo que es una contradicción, por lo que \(x=0\), ahora como \(x=0\) se tiene que \(c\cdot 0+dy=0\) por lo que \(dy=0\), recordamos que \(d\neq0\) por lo que \(y=0\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Para \(\alpha,\beta\in\set{R}\), consideramos la ecuación
+    \begin{equation*}
+        x^2+\alpha x+\beta=0.
+    \end{equation*}
+    Suponiendo que \(a,b\in\set{R}\) son las únicas soluciones de la ecuación, y además \(a\neq b\), encuentre \(\alpha\) y \(\beta\) en términos de \(a\) y \(b\).\\
+    \textit{\textbf{Bonus:} Encuentre \(\alpha\) y \(\beta\) si \(a=b\).}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Como \(a,b\) son soluciones se tienen la siguientes igualdades
+        \begin{align*}
+            a^2+\alpha a+\beta&=b^2+\alpha b+\beta\\
+            a^2+\alpha a&=b^2+\alpha b\\
+            \alpha a-\alpha b&=b^2-a^2\\
+            \alpha (a-b)&=(b-a)(a+b)\\
+            \alpha (a-b)&=-(a-b)(a+b)\\
+            \alpha&=-(a+b)\\
+        \end{align*}
+        Usando que \(a\) es solución de la ecuación y reemplazando el valor encontrado de \(\alpha\) se tiene que
+        \begin{align*}
+            a^2+(-(a+b))a+\beta&=0\\
+            a^2+(-a^2)+ab+\beta&=0\\
+            ab+\beta&=0\\
+            \beta&=-ab\\
+        \end{align*}
+        Por lo que \(\alpha=-(a+b)\) y \(\beta=-ab\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre que \(-b<-a\) si y solo si \(a<b\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se nota que solo se necesita una implicancia, ya que \(-(-a)=a\), con lo que si se tiene que \((-b<-a)\implies (a<b)\), entonces se puede usar para que \(-(-a)<-(-b)\implies(-b<-a)\). Ahora, para demostrar que \((-b<-a)\implies(a<b)\) se nota que \(-b<-a\) si y solo si \((-a-(-b))\in\set{R}_\star^+\), o sea que \((b-a)\in\set{R}_\star^+\), y esto último nos da que \(a<b\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre que si \(b<a<0\), entonces \(0<a^2<b^2\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se nota que \(b=-(-b)\), que \(a=-(-a)\) y que \(-0=0\), por lo que \(-(-b)<-(-a)<-0\), por lo que \(0<(-a)<(-b)\). Ahora como \((-a)>0\) se tiene que \(0\cdot(-a)<(-a)\cdot(-a)<(-b)\cdot(-a)\) (visto en clase), similarmente como \((-b)>0\) se tiene que \((-b)\cdot a<(-b)\cdot (-a)<(-b)\cdot(-b)\). Usando transitividad se tiene que \(0<(-a)\cdot(-a)<(-b)\cdot(-b)\), como \(-a=(-1)\cdot a\) y \((-1)\cdot(-1)=1\) se tiene que \(0<a^2<b^2\).
+    \end{sol}
+\end{ans}
+
+\end{document}
