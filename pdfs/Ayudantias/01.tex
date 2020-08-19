@@ -15,8 +15,6 @@
 
 \immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
 \immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
-%'pdflatex -interaction=nonstopmode -synctex=1 -shell-escape -jobname="Enunciado"\jobname -output-directory="../Enunciados" "\gdef\string\condition{0} \string\input\space\jobname"; 
-%'pdflatex -interaction=nonstopmode -synctex=1 -shell-escape -jobname="Solución"\jobname -output-directory="../Soluciones" "\gdef\string\condition{0} \string\input\space\jobname"; 
 
 \expandafter\stop
 \fi

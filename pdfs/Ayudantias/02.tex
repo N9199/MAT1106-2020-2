@@ -1,0 +1,162 @@
+\documentclass{ayudantia}
+
+\title{Ayudantía 01}
+\date{2020-08-19}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+\ifx\condition\undefined
+\def\condition{1}
+\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Sean \(a,b\) tales que \(ab=1\). Demuestre que \(a^2+b^2\geq2\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se recuerda que \((a-b)^2\geq0\), por lo que \((a^2+b^2)-2ab\geq0\), como \(ab=1\) se tiene que \((a^2+b^2)-2\geq0\) por lo que usando la definición de \(\geq\) se tiene que \(a^2+b^2\geq2\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sean \(a,b\in\set{R}\)
+    \begin{enumerate}
+        \item Demuestre que \(a^2+ab+b^2\geq0\), y determine cuando se cumple la igualdad.
+        \item Demuestre que \(a^3-b^3=(a-b)(a^2+ab+b^2)\).
+        \item Concluya que \(a^3>b^3\) si y solo si \(a>b\).
+    \end{enumerate}\
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        \begin{enumerate}
+            \item Se nota que \(a^2+ab+b^2=\frac{a^2+b^2}2+\frac{(a+b)^2}2\), por lo que \(a^2+ab+b^2\geq0\). Dado eso, se tiene que \(a^2+ab+b^2=0\) si y solo si \(a^2+b^2=0\) por lo que \(a=b=0\).
+            \item Se ve lo siguiente:
+            \begin{align*}
+                (a-b)(a^2+ab+b^2)&=a(a^2+ab+b^2)-b(a^2+ab+b^2)\\
+                &=a^3+a^2b+ab^2-ba^2-ab^2-b^3\\
+                &=a^3-b^3\\
+            \end{align*}
+            \item Con lo anterior, se nota que si \(a^3>b^3\) o \(a>b\), se tiene que \(a\neq b\), por lo que \(a^2+ab+b^2>0\). Por ende
+            \begin{align*}
+                a^3>b^3&\iff a^3-b^3>0\\
+                &\iff (a-b)(a^2+ab+b^2)>0\\
+                &\iff a-b>0\cdot(a^2+ab+b^2)^{-1}\\
+                &\iff a-b>0\\
+                &\iff a>b\\
+            \end{align*}
+        \end{enumerate}
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sean \(a,b,c,d\in\set{R}\) tales que \(a<b\) y \(c<d\). Pruebe que \(ad+bc<ac+bd\)
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Notar que \(0<b-a\) y \(0<d-c\), por lo que
+        \begin{align*}
+            0<(b-a)(d-c)&\iff 0<b(d-c)-a(d-c)\\
+            &\iff 0<bd-bc-ad+ac\\
+            &\iff ad+bc<ac+bd
+        \end{align*}
+        Con lo que se tiene lo pedido.
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre que si \(L-\varepsilon\leq M\) para todo \(\varepsilon>0\), entonces \(L\leq M\)
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Por contradicción, se asume que \(L>M\), luego sea \(\varepsilon=\frac{L-M}2>0\), entonces
+        \begin{align*}
+            L-\varepsilon\leq M&\iff L-\frac{L-M}2\leq M\\
+            &\iff 2L-(L-M)\leq 2M\\
+            &\iff 2L-L+M\leq 2M\\
+            &\iff L+M\leq 2M\\
+            &\iff L\leq M\\
+        \end{align*}
+        Lo último es una contradicción, por lo que \(L\leq M\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Se define el mínimo entre \(a\) y \(b\) como
+    \begin{equation*}
+        \min(a,b)=\begin{cases}
+            a&\text{si }a\leq b\\
+            b&\text{si }a>b\\
+        \end{cases}
+    \end{equation*}
+    Demuestre que \(\abs{x}=-\min(x,-x)\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Por casos, si \(x\geq0\) se tiene que \(\abs{x}=x\), ahora como \(x\geq0\) se tiene que \(-x\leq 0\leq x\), por lo que \(\min(x,-x)=-x\), más aún \(-\min(x,-x)=x=\abs{x}\). Si \(x<0\), se tiene que \(\abs{x}=-x\) y \(-x>0>x\), por lo tanto \(\min(x,-x)=x\), y \(-\min(x,-x)=-x=\abs{x}\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Se define el máximo entre \(a\) y \(b\) como
+    \begin{equation*}
+        \max(a,b)=\begin{cases}
+            a&\text{si }a\geq b\\
+            b&\text{si }a<b\\
+        \end{cases}
+    \end{equation*}
+    Demuestre que \(\max(a,b)=\frac{a+b}2+\frac{\abs{a-b}}2\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        De nuevo, por casos, si \(a\geq b\) se tiene que \(\abs{a-b}=a-b\), por lo que
+        \begin{align*}
+            \frac{a+b}2+\frac{\abs{a-b}}2&=\frac{a+b}2+\frac{a-b}2\\
+            &=\frac{a+b+a-b}2\\
+            &=\frac{2a}2\\
+            &=a\\
+            &=\max(a,b)\\
+        \end{align*}
+        Si \(a<b\) se tiene que \(abs{a-b}=b-a\), entonces
+        \begin{align*}
+            \frac{a+b}2+\frac{\abs{a-b}}2&=\frac{a+b}2+\frac{b-a}2\\
+            &=\frac{a+b+b-a}2\\
+            &=\frac{2b}2\\
+            &=b\\
+            &=\max(a,b)\\
+        \end{align*}
+        Con lo que se tiene lo pedido.
+    \end{sol}
+\end{ans}
+
+
+\end{document}
