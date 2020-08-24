@@ -1,0 +1,139 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 03}
+\date{2020-08-25}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    ¿Bajo qué condiciones \(\abs{x+y}=\abs{x}+\abs{y}\)?
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se nota que si \(x\) e \(y\) son positivos, entonces \(\abs{x+y}=\abs{x}+\abs{y}\), ahora si \(x\) e \(y\) ambos son negativos, se tiene que \(-x\) y \(-y\) son positivos, luego
+        \begin{align*}
+            \abs{x+y}&=\abs{-(x+y)}\\
+            &=\abs{(-x)+(-y)}\\
+            &=\abs{(-x)}+\abs{(-y)}\\
+            &=\abs{x}+\abs{y}
+        \end{align*}
+        Ahora, si el signo de \(x\) es distinto al de \(y\), se asume s.p.d.g. que \(x>0\) y ambos no cero, entonces
+        \begin{align*}
+            \abs{x}+abs{y}&=\abs{x}+\abs{-y}\\
+            &=\abs{x+(-y)}
+        \end{align*}
+        Ahora, se tiene que \(\abs{x+y}=\abs{x}+\abs{y}\) si y solo si \(\abs{x-y}=\abs{x+y}\), pero esto implica que \((x-y)^2=(x+y)^2\) por lo que \(4xy=0\), como \(x>0\) y \(4>0\) se tiene que \(y=0\), pero se asumió que \(y<0\), por lo que se tiene que \(\abs{x+y}\neq\abs{x}+\abs{y}\). Por último si \(x\) o \(y\), se puede asumir s.p.d.g. que \(y=0\)\footnote{se permuta \(x\) con \(y\).} y por lo tanto se tiene que
+        \begin{align*}
+            \abs{x+y}&=\abs{x+0}
+            &=\abs{x}\\
+            &=\abs{x}+0\\
+            &=\abs{x}+\abs{y}\\
+        \end{align*}
+        Con eso se ven todos los casos.
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Muestre que \(\abs{x_1+\dots+x_n}\leq\abs{x_1}+\dots+\abs{x_n}\) para cualesquiera \(x_1,\dots,x_n\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Por inducción sobre \(n\), si \(n=1\), se tiene trivialmente que \(\abs{x_1}\leq\abs{x_1}\). Ahora, se asume para \(k=n\). Sean \(x_1,\dots,x_{n+1}\) reales cualesquiera, entonces se tiene lo siguiente:
+        \begin{align*}
+            \abs{(x_1+\dots+x_n)+x_{n+1}}&\leq\abs{x_1+\dots+x_n}+\abs{x_{n+1}}\\
+            &\leq\abs{x_1+\dots+x_n}+\abs{x_{n+1}}\\
+            &\leq\abs{x_1}+\dots+\abs{x_n}+\abs{x_{n+1}}
+        \end{align*}
+        Demostrando lo pedido.
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Encuentre el conjunto solución de las siguientes expresiones:
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item \(\ds\frac{x^2-1}{x^2-4}\leq 0\)
+            \item \(\ds\abs{\frac{5x-2}{3x+1}}> 7\)
+        \end{enumerate}
+    \end{multicols}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        \begin{enumerate}
+            \item Se factoriza la expresión a la derecha y se ve la siguiente desigualdad
+            \begin{equation*}
+                \frac{(x-1)(x+1)}{(x-2)(x+2)}\leq0
+            \end{equation*}
+            Se nota que si \(x=-2\) o \(x=2\), la expresión no está bien definida. Ahora, a través del uso de la siguiente tabla se observarán los posibles casos:
+            \begin{center}
+                \begin{tabular}{c|c|c|c|c|c|}
+                    &\((-\infty,-2)\)&\((-2,-1)\)&\((-1,1)\)&\((1,2)\)&\((2,\infty)\)\\\hline
+                    \(x+2\)&-&+&+&+&+\\
+                    \(x+1\)&-&-&+&+&+\\
+                    \(x-1\)&-&-&-&+&+\\
+                    \(x-2\)&-&-&-&-&+\\
+                    \(\ds\frac{(x-1)(x+1)}{(x-2)(x+2)}\)&+&-&+&-&+\\
+                \end{tabular}
+            \end{center}
+            Con lo anterior se ve que la expresión es estrictamente menor a \(0\) en \((-2,-1)\cup(1,2)\), para el caso donde la expresión es igual a \(0\) se nota que la expresión es cero si \(x=1\) o \(x=-1\), por lo que el conjunto solución es \((-2,-1]\cup[1,2)\)
+        \end{enumerate}
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sea \(x>0\). Demuestre que
+    \begin{equation*}
+        \sqrt{1+x}\leq1+x\leq(1+\sqrt{x})^2
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se nota que \(1+x>0\), por lo que \(\sqrt{1+x}>0\). Dado eso, se ven las siguientes equivalencias:
+        \begin{align*}
+            0<\sqrt{1+x}\leq1+x&\iff 0<1+x\leq(1+x)^2
+            &\iff 0<1+x\leq1+2x+x^2
+            &\iff 1+x\leq1+2x+x^2
+            &\iff 0\leq x+x^2
+            &\iff 0\leq x(x+1)
+        \end{align*}
+        Como \(x>0\) se tiene que \(0<x(x+1)\). Y por la cadena de equivalencias se tiene la primera desigualdad. Para la segunda desigualdad, se ven la siguientes equivalencias
+        \begin{align*}
+            0<1+x\leq(1+\sqrt{x})^2&\iff 1+x\leq1+2\sqrt{x}+x
+            &\iff 0\leq 2\sqrt{x}
+        \end{align*}
+        De nuevo, como \(x>0\) se tiene que \(\sqrt{x}>0\), y por la cadena de equivalencias se tiene lo pedido.
+    \end{sol}
+\end{ans}
+
+
+\end{document}
