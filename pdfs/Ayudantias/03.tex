@@ -5,9 +5,9 @@
 \course{MAT1106 --- Introducción al Cálculo}
 
 % Comment for final compile
-%\ifx\condition\undefined
-%\def\condition{1}
-%\fi
+% \ifx\condition\undefined
+% \def\condition{1}
+% \fi
 
 \ifx\condition\undefined
 \immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
@@ -43,12 +43,12 @@
         \end{align*}
         Ahora, si el signo de \(x\) es distinto al de \(y\), se asume s.p.d.g. que \(x>0\) y ambos no cero, entonces
         \begin{align*}
-            \abs{x}+abs{y}&=\abs{x}+\abs{-y}\\
+            \abs{x}+\abs{y}&=\abs{x}+\abs{-y}\\
             &=\abs{x+(-y)}
         \end{align*}
         Ahora, se tiene que \(\abs{x+y}=\abs{x}+\abs{y}\) si y solo si \(\abs{x-y}=\abs{x+y}\), pero esto implica que \((x-y)^2=(x+y)^2\) por lo que \(4xy=0\), como \(x>0\) y \(4>0\) se tiene que \(y=0\), pero se asumió que \(y<0\), por lo que se tiene que \(\abs{x+y}\neq\abs{x}+\abs{y}\). Por último si \(x\) o \(y\), se puede asumir s.p.d.g. que \(y=0\)\footnote{se permuta \(x\) con \(y\).} y por lo tanto se tiene que
         \begin{align*}
-            \abs{x+y}&=\abs{x+0}
+            \abs{x+y}&=\abs{x+0}\\
             &=\abs{x}\\
             &=\abs{x}+0\\
             &=\abs{x}+\abs{y}\\
@@ -103,7 +103,43 @@
                     \(\ds\frac{(x-1)(x+1)}{(x-2)(x+2)}\)&+&-&+&-&+\\
                 \end{tabular}
             \end{center}
-            Con lo anterior se ve que la expresión es estrictamente menor a \(0\) en \((-2,-1)\cup(1,2)\), para el caso donde la expresión es igual a \(0\) se nota que la expresión es cero si \(x=1\) o \(x=-1\), por lo que el conjunto solución es \((-2,-1]\cup[1,2)\)
+            Con lo anterior se ve que la expresión es estrictamente menor a \(0\) en \((-2,-1)\cup(1,2)\), para el caso donde la expresión es igual a \(0\) se nota que la expresión es cero si \(x=1\) o \(x=-1\), por lo que el conjunto solución es \((-2,-1]\cup[1,2)\).
+            \item Se nota que si \(x>-\frac13\) se tiene que \(3x+1>0\), similarmente si \(x<-\frac13\) se tiene que \(3x+1<0\), juntando eso con que \(\abs{\frac{5x-2}{3x+1}}>7\) si y solo si \(\frac{5x-2}{3x+1}>7\) o \(\frac{5x-2}{3x+1}<-7\), se tienen cuatro casos:
+            \begin{enumerate}[label={Caso \arabic*:}]
+                \item \(x>-\frac13\) y \(\frac{5x-2}{3x+1}>7\), dado eso se tiene la siguiente cadena de \(\iff\)
+                \begin{align*}
+                    \frac{5x-2}{3x+1}>7&\iff 5x-2>7*\paren{3x+1}\\
+                    &\iff 5x-2>21x+7\\
+                    &\iff -9>16x\\
+                    &\iff -\frac9{16}>x\\
+                \end{align*}
+                Por lo que \(x\in(-\frac13,-\frac9{16})\).
+                \item \(x<-\frac13\) y \(\frac{5x-2}{3x+1}>7\), dado eso se tiene la siguiente cadena de \(\iff\)
+                \begin{align*}
+                    \frac{5x-2}{3x+1}>7&\iff 5x-2<7*\paren{3x+1}\\
+                    &\iff 5x-2<21x+7\\
+                    &\iff -9<16x\\
+                    &\iff -\frac9{16}<x\\
+                \end{align*}
+                Por lo que \(x\in(-\frac9{16},-\frac13)\).
+                \item \(x>-\frac13\) y \(\frac{5x-2}{3x+1}<-7\), dado eso se tiene la siguiente cadena de \(\iff\)
+                \begin{align*}
+                    \frac{5x-2}{3x+1}<-7&\iff 5x-2<-7*\paren{3x+1}\\
+                    &\iff 5x-2<-21x-7\\
+                    &\iff 26x<-5\\
+                    &\iff x<-\frac5{26}\\
+                \end{align*}
+                Por lo que \(x\in(-\frac13,-\frac5{26})\).
+                \item \(x<-\frac13\) y \(\frac{5x-2}{3x+1}<-7\), dado eso se tiene la siguiente cadena de \(\iff\)
+                \begin{align*}
+                    \frac{5x-2}{3x+1}<-7&\iff 5x-2<-7*\paren{3x+1}\\
+                    &\iff 5x-2>-21x-7\\
+                    &\iff 26x>-5\\
+                    &\iff x>-\frac5{26}\\
+                \end{align*}
+                Por lo que \(x\in(-\frac5{26},-\frac13)\).
+            \end{enumerate}
+            Juntando todos lo casos, y notando que \(-\frac9{16}<-\frac13\) y que \(-\frac13<-\frac5{26}\), se tiene que el conjunto solución es \((-\frac9{16},-\frac13)\cup (-\frac13,-\frac5{26})\)
         \end{enumerate}
     \end{sol}
 \end{ans}

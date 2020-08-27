@@ -342,3 +342,4 @@ _site
 .DS_STORE
 *.tmp
 *.sh
+regex

@@ -1,0 +1,123 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 04}
+\date{2020-08-27}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Sean \(a,b>0\), muestre que
+    \begin{equation*}
+        \frac2{\frac1a+\frac1b}\leq\sqrt{ab}
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Notar que \(\frac2{\frac1a+\frac1b}=\frac{2ab}{a+b}\). Por lo que es equivalente probar lo siguiente
+        \begin{equation*}
+            \frac{2ab}{a+b}\leq\sqrt{ab}
+        \end{equation*}
+        Ahora, como \(\frac{a+b}{2\sqrt{ab}}>0\) se tiene que multiplicar por esa expresión no cambia el la desigualdad. Por lo que se tiene que \(\frac{ab}{\sqrt{ab}}\leq\frac{a+b}2\), que es equivalente a la desigualdad MA-MG.
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre que dados \(a,b,c>0\) se tiene que
+    \begin{equation*}
+        (a+b)(a+c)\geq2\sqrt{abc(a+bc)}
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se nota que la desigualdad es equivalente la siguiente
+        \begin{equation*}
+            \frac{a^2+ab+ac+bc}2\geq\sqrt{abc(a+b+c)}
+        \end{equation*}
+        Y esta es verdad por MA-MG tomando \(a(a+b+c)\) y \(bc\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre que dados \(x_1,\dots,x_n\) reales positivos, se tiene
+    \begin{equation*}
+        \frac{x_1+\cdots+x_n}n\geq\sqrt[n]{x_1\cdot\cdots\cdot x_n}
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se usa inducción de la siguiente forma, dado \(P(n)\) se demuestra \(P(2n)\) y dado \(P(n)\) se demuestra \(P(n-1)\). El caso base es \(n=2\), que fue demostrado en clases.
+        \begin{itemize}
+            \item\(P(n)\implies P(2n)\): Dado \(x_1,\cdots,x_n,x_{n+1},\cdots,x_{2n}\geq0\) se tiene que
+            \begin{align*}
+                \frac{x_1+\cdots+x_n+x_{n+1}+\cdots+x_{2n}}{2n}&=\frac{\frac{x_1+\cdots+x_n}n+\frac{x_{n+1}+\cdots+x_{2n}}n}2\\
+                &\geq\sqrt{\frac{x_1+\cdots+x_n}n\cdot\frac{x_{n+1}+\cdots+x_{2n}}n}\\
+                &\geq\sqrt{\sqrt[n]{x_1\cdot\cdots\cdot x_n}\cdot\sqrt[n]{x_{n+1}\cdot\cdots\cdot x_{2n}}}\\
+                &\geq\sqrt{\sqrt[n]{x_1\cdot\cdots\cdot x_n\cdot x_{n+1}\cdot\cdots\cdot x_{2n}}}\\
+                &\geq\sqrt[2n]{x_1\cdot\cdots\cdot x_n\cdot x_{n+1}\cdot\cdots\cdot x_{2n}}\\
+            \end{align*}
+            \item \(P(n)\implies P(n-1)\): Dado \(x_1,\cdots,x_{n-1}\geq0\) se agrega \(x_n=\frac{x_1+\cdots+x_{n-1}}{n-1}\) y se tiene
+            \begin{align*}
+                \frac{x_1+\cdots+x_{n-1}+\frac{x_1+\cdots+x_{n-1}}{n-1}}n&\geq\sqrt[n]{x_1\cdot\cdots\cdot x_{n-1}\cdot\frac{x_1+\cdots+x_{n-1}}{n-1}}&\iff\\
+                \frac{(n-1)x_1+\cdots+(n-1)x_{n-1}+x_1+\cdots+x_{n-1}}{n(n-1)}&\geq\sqrt[n]{x_1\cdot\cdots\cdot x_{n-1}}\cdot\sqrt[n]{\frac{x_1+\cdots+x_{n-1}}{n-1}}&\iff\\
+                \frac{nx_1+\cdots+nx_{n-1}}{n(n-1)}&\geq\sqrt[n]{x_1\cdot\cdots\cdot x_{n-1}}\cdot\sqrt[n]{\frac{x_1+\cdots+x_{n-1}}{n-1}}&\iff\\
+                \frac{x_1+\cdots+x_{n-1}}{n-1}&\geq\sqrt[n]{x_1\cdot\cdots\cdot x_{n-1}}\cdot\sqrt[n]{\frac{x_1+\cdots+x_{n-1}}{n-1}}&\iff\\
+                \paren{\frac{x_1+\cdots+x_{n-1}}{n-1}}^{\frac{n-1}n}&\geq\sqrt[n]{x_1\cdot\cdots\cdot x_{n-1}}&\iff\\
+                \paren{\frac{x_1+\cdots+x_{n-1}}{n-1}}^{n-1}&\geq x_1\cdot\cdots\cdot x_{n-1}&\iff\\
+                \frac{x_1+\cdots+x_{n-1}}{n-1}&\geq \sqrt[n-1]{x_1\cdot\cdots\cdot x_{n-1}}&\iff\\
+            \end{align*}
+        \end{itemize}
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sean \(a,b,c>0\) demuestre que
+    \begin{equation*}
+        \frac{(a+b+c)^2}3\geq a\sqrt{bc}+b\sqrt{ac}+c\sqrt{ab}
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Por MA-MG se tiene que \(ab+bc\geq2b\sqrt{ac}\), haciendo desigualdades de la misma forma y sumando se tiene que
+        \begin{equation*}
+            2(ab+bc+ac)\geq2(b\sqrt{ac}+a\sqrt{bc}+c\sqrt{ab})
+        \end{equation*}
+        Nuevamente por MA-MG se tiene que \(a^2+a^2+b^2+c^2\geq4a\sqrt{bc}\), haciendo desigualdades de la misma forma se tiene lo siguiente
+        \begin{equation*}
+            a^2+b^2+c^2\geq2(b\sqrt{ac}+a\sqrt{bc}+c\sqrt{ab})
+        \end{equation*}
+        Sumando esas ecuaciones se tiene lo pedido.
+    \end{sol}
+\end{ans}
+
+
+\end{document}
