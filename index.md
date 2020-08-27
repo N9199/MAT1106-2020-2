@@ -4,7 +4,7 @@ title: Índice
 
 # {{page.title}}
 
-**Última actualización: Miercoles 26/08 (Solución Ayudantía 013 y Ayudantía 04)**
+**Última actualización: Miercoles 26/08 (Solución Ayudantía 03 y Ayudantía 04)**
 
 ## Ayudantías
 
