@@ -108,14 +108,17 @@
 \begin{ans}
     \begin{sol}
         Por MA-MG se tiene que \(ab+bc\geq2b\sqrt{ac}\), haciendo desigualdades de la misma forma y sumando se tiene que
-        \begin{equation*}
+        \begin{equation}\label{1}
             2(ab+bc+ac)\geq2(b\sqrt{ac}+a\sqrt{bc}+c\sqrt{ab})
-        \end{equation*}
+        \end{equation}
         Nuevamente por MA-MG se tiene que \(a^2+a^2+b^2+c^2\geq4a\sqrt{bc}\), haciendo desigualdades de la misma forma se tiene lo siguiente
+        \begin{equation}\label{2}
+            3a^2+3b^2+3c^2\geq4(b\sqrt{ac}+a\sqrt{bc}+c\sqrt{ab})
+        \end{equation}
+        Sumando \(3\) veces \eqref{1} a \eqref{2} se tiene lo siguiente:
         \begin{equation*}
-            a^2+b^2+c^2\geq2(b\sqrt{ac}+a\sqrt{bc}+c\sqrt{ab})
+            \frac{a^2+b^2+c^2}3\geq\frac3{10}(a^2+b^2+c^2)\geq a\sqrt{bc}+b\sqrt{ac}+c\sqrt{ab}
         \end{equation*}
-        Sumando esas ecuaciones se tiene lo pedido.
     \end{sol}
 \end{ans}
 
