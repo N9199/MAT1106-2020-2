@@ -1,0 +1,144 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 04}
+\date{2020-08-27}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+\ifx\condition\undefined
+\def\condition{1}
+\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Sean \(a,b>0\) demuestre que
+    \begin{equation*}
+        \sqrt{\frac{a^2+b^2}2}\geq\frac{a+b}2.
+    \end{equation*}
+    ¿Cuándo se alcanza la igualdad?
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se ve el siguiente desarrollo
+        \begin{align*}
+            0<\frac{a+b}2           & \leq\sqrt{\frac{a^2+b^2}2} & \iff \\
+            0<\paren{\frac{a+b}2}^2 & \leq\frac{a^2+b^2}2        & \iff \\
+            \frac{a^2+2ab+b^2}4     & \leq\frac{a^2+b^2}2        & \iff \\
+            0                       & \leq\frac{a^2-2ab+b^2}2    & \iff \\
+            0                       & \leq\frac{(a-b)^2}2        & \iff \\
+        \end{align*}
+        Y lo último es cierto.
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sean \(a,b,c,d>0\) demuestre que
+    \begin{equation*}
+        \sqrt{(a+c)(d+b)}\geq\sqrt{ab}+\sqrt{cd}
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se tiene lo siguiente
+        \begin{align*}
+            0<\sqrt{(a+c)(d+b)} & \geq\sqrt{ab}+\sqrt{cd}           & \iff \\
+            0<(a+c)(d+b)        & \geq\paren{\sqrt{ab}+\sqrt{cd}}^2 & \iff \\
+            ad+bc+ab+cd         & \geq ab+2\sqrt{abcd}+cd           & \iff \\
+            ad+bc               & \geq2\sqrt{abcd}                  & \iff \\
+            \frac{ad+bc}2       & \geq\sqrt{abcd}                   & \iff \\
+        \end{align*}
+        y lo último es cierto por MA-MG.
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sean \(a_1,a_2,\cdots,a_n>0\) demuestre que
+    \begin{equation*}
+        \paren{a_1+\cdots+a_n}\cdot\paren{\frac1{a_1}+\cdots+\frac1{a_n}}\geq n^2
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se nota que en la izquierda hay \(n^2\) cuadrados términos, por lo que se toma la media aritmética y se usa MA-MG
+        \begin{equation*}
+            \frac{\paren{a_1+\cdots+a_n}\cdot\paren{\frac1{a_1}+\cdots+\frac1{a_n}}}{n^2}\geq \sqrt[n^2]{1}
+        \end{equation*}
+        En la derecha hay un \(1\) ya que para todo término de la forma \(\frac{a_i}{a_j}\) en la multiplicación está el término \(\frac{a_j}{a_i}\). Se ve que lo anterior es equivalente a lo pedido.
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sean \(a_1,\cdots,a_n\) y \(b_1,\cdots, b_n\) reales tales que para todo \(1\leq j\leq n-1\) se tiene que \(a_i>a_{i+1}\) y \(b_i>b_{i+1}\). Demuestre que
+    \begin{equation*}
+        a_1b_1+a_2b_2+\cdots+a_nb_n>S_n>a_1b_n+a_2b_{n-1}+\cdots+a_nb_1.
+    \end{equation*}
+    Donde \(S_n\) es la suma de \(a_{k_i}b_{j_i}\) con \(k_i,j_i\in\{1,\cdots,n\}\) tales que \(k_a\neq k_b\) y \(j_a\neq j_b\) si \(a\neq b\), y que no se tiene que para todo \(i\in\{1,\cdots,n\}\) \(k_i=j_i\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Se nota que si se tiene la primera parte de la desigualdad, se tiene la segunda, ya que si se toma \(b^*_i=-b_i\), se tiene
+        \begin{align*}
+            a_1b^*_n+\cdots+a_nb^*_1 & >S_n^* & \iff \\
+            a_1b_n+\cdots+a_nb_1     & <S_n.
+        \end{align*}
+        Dado eso, se nota que se pide demostrar que el máximo de todas las permutaciones es \(k_i=j_i=i\) para todo \(1\leq i\leq n\). Para eso, se usará inducción sobre \(n\). Ahora, para \(n=2\) sean \(a_1>a_2\) y \(b_1>b_2\), entonces
+        \begin{align*}
+            a_1b_1+a_2b_2                & >a_1b_2a+a_2b_1 & \iff \\
+            a_1b_1+a_2b_2-a_1b_2a-a_2b_1 & >0              & \iff \\
+            a_1(b_1-b_2)+a_2(b_2-b_1)    & >0              & \iff \\
+            (a_1-a_2)(b_1-b_2)           & >0.
+        \end{align*}
+        Lo que es cierto ya que \(a_1>a_2\) y \(b_1>b_2\). Para el caso \(n=k\) se asumen los casos \(n<k\), y sean \(a_1,\cdots,a_n\) y \(b_1,\cdots, b_n\) tales que \(a_i>a_{i+1}\) y \(b_i>b_{i+1}\) para \(1\leq i<n\). Sean \(a_i,b_j\) tales que \(j>1\) e \(i>1\), luego s.p.d.g. \(i\leq j\) y por la hipótesis inductiva sobre \(a_2,\cdots,a_{i-1},a_{i+1},\cdots,a_n\) y \(b_2,\cdots,b_{j-1},b_{j+1},\cdots,b_n\) se tiene que
+        \begin{equation*}
+            a_2b_2+\cdots+a_{i-1}b_{i-1}+a_{i+1}b_i+\cdots+a_jb_{j-1}+a_{j+1}b_{j+1}+\cdots+a_nb_n>S_{n-2}.
+        \end{equation*}
+        Dado eso, se tiene que
+        \begin{align*}
+            a_1b_1+a_ib_j+S_{n-2}      & >a1b_j+a_ib_1+S_{n-2} & \iff \\
+            a_1b_1+a_ib_j              & >a1b_j+a_ib_1         & \iff \\
+            a_1b_1+a_ib_j-a1b_j-a_ib_1 & >0                    & \iff \\
+            a_1(b_1-b_i)+a_i(b_j-b_1)  & >0                    & \iff \\
+            (a_1-a_j)(b_1-b_i)         & >0.
+        \end{align*}
+        Lo cual es verdad ya que \(a_1>a_j\) y \(b_1>b_j\), por último se tiene que
+        \begin{equation*}
+            a_1b_1+a_ib_j+a_2b_2+\cdots+a_{i-1}b_{i-1}+a_{i+1}b_i+\cdots+a_jb_{j-1}+a_{j+1}b_{j+1}+\cdots+a_nb_n>a_1b_1+a_ib_j+S_{n-2}.
+        \end{equation*}
+        Por lo que aplicando la hipótesis inductiva sobre \(a_i,a_{i+1},\cdots,a_j\) y sobre \(b_i,\cdot, b_j\) se tiene que
+        \begin{equation*}
+            a_1b_1+\cdots+a_ib_i+\cdots+a_jb_j+\cdots+a_nb_n>a_1b_1+a_ib_j+\cdots+a_{i-1}b_{i-1}+a_{i+1}b_i+\cdots+a_jb_{j-1}+a_{j+1}b_{j+1}+\cdots+a_nb_n.
+        \end{equation*}
+        Juntando las desigualdades usando transitividad y recordando que \(i,j\) eran arbitrarios, se tiene que
+        \begin{equation*}
+            a_1b_1+\cdots+a_ib_i+\cdots+a_jb_j+\cdots+a_nb_n>a1b_j+a_ib_1+S_{n-2}=S_n,
+        \end{equation*}
+        con lo que se demuestra la hipótesis inductiva.
+    \end{sol}
+\end{ans}
+
+\end{document}

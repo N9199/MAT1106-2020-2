@@ -5,9 +5,9 @@
 \course{MAT1106 --- Introducción al Cálculo}
 
 % Comment for final compile
-%\ifx\condition\undefined
-%\def\condition{1}
-%\fi
+\ifx\condition\undefined
+\def\condition{1}
+\fi
 
 \ifx\condition\undefined
 \immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
@@ -49,7 +49,7 @@
 \begin{prob}
     Demuestre que dados \(a,b,c>0\) se tiene que
     \begin{equation*}
-        (a+b)(a+c)\geq2\sqrt{abc(a+bc)}
+        (a+b)(a+c)\geq2\sqrt{abc(a+b+c)}
     \end{equation*}
 \end{prob}
 

@@ -4,7 +4,7 @@ title: Índice
 
 # {{page.title}}
 
-**Última actualización: Jueves 27/08 (Solución Ayudantía 04)**
+**Última actualización: Lunes 31/08 (Ayudantía 05)**
 
 ## Ayudantías
 
@@ -12,5 +12,6 @@ title: Índice
 - Ayudantía 02 (Axiomas de Orden y Valor Absoluto) - [Enunciado](pdfs/Enunciados/Enunciado02.pdf) - [Solución](pdfs/Soluciones/Solucion02.pdf)
 - Ayudantía 03 (Valor Absoluto y Desigualdades) - [Enunciado](pdfs/Enunciados/Enunciado03.pdf) - [Solución](pdfs/Soluciones/Solucion03.pdf)
 - Ayudantía 04 (Desigualdad MA-MG) - [Enunciado](pdfs/Enunciados/Enunciado04.pdf) - [Solución](pdfs/Soluciones/Solucion04.pdf)
+- Ayudantía 04 (Desigualdad MA-MG y Desigualdades) - [Enunciado](pdfs/Enunciados/Enunciado05.pdf) - [Solución]()
 
 [Acerca de](about)
