@@ -17,4 +17,6 @@ title: Índice
 
 ## Otros
 El jueves 10/09 (última ayudantía antes de la I1) será una ayudantía de repaso, por esto les pido que traigan dudas para esa ayudantía.
+
+
 [Acerca de](about)
