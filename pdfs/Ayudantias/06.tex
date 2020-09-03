@@ -1,0 +1,108 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 06}
+\date{2020-09-03}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+\ifx\condition\undefined
+\def\condition{1}
+\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Encuentre el conjunto de solución de la inecuación
+    \begin{equation*}
+        \frac3{1-x}<\frac{x+6}{2-x}
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sea \(\alpha>0\). Encuentre todos los valores de \(x\) tales que
+    \begin{equation*}
+        \abs{x^2-\alpha^2}>\abs{x-\alpha}
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    \textit{(I3 2017)} Sea \(z>0\) fijo, y sea \(A_z\) el conjunto de solución de la inecuación
+    \begin{equation*}
+        \abs{x^2+xz+z^2}\leq zx+2z^2.
+    \end{equation*}
+    Demuestre que si \(0<z_1<z_2\), entonces \(A_{z_1}\subseteq A_{z_2}\)
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Sabemos que \(x^2+zx+z^2\geq0\) por ayudantía pasada. Por lo que la inecuación es equivalente a
+        \begin{equation*}
+            x^2\leq z^2
+        \end{equation*}
+        Se sabe que el conjunto solución de esa inecuación es \([-z,z]\).
+
+        Si \(0<z_1<z_2\), entonces \(-z_1>-z_2\). Sea \(x\in A_{z_1}\), esto nos dice que \(-z_1\leq x\leq z_1\). Por lo que \(-z_2< -z_1\leq x\leq z_1< z_2\) nos dice que \(x\in A_{z_2}\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre la desigualdad de Nesbitt: Si \(a,b,c>0\) se tiene que
+    \begin{equation*}
+        \frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b}\geq\frac32
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        S.p.d.g. \(a\geq b\geq c\), por lo que
+        \begin{equation*}
+            \frac1{b+c}\geq\frac1{a+c}\geq\frac1{a+b}
+        \end{equation*}
+        Usando la desigualdad demostrada la ayudantía pasada se tiene que
+        \begin{align*}
+            \frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b}&\geq\frac{b}{b+c}+\frac{c}{a+c}+\frac{a}{a+b}\\
+            \frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b}&\geq\frac{c}{b+c}+\frac{a}{a+c}+\frac{b}{a+b}\\
+        \end{align*}
+        Sumando ambas desigualdades se tiene
+        \begin{equation*}
+            2\paren{\frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b}}\geq3
+        \end{equation*}
+        Lo que es equivalente lo pedido.s
+    \end{sol}
+\end{ans}
+
+
+\end{document}

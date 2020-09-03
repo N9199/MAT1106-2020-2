@@ -1,7 +1,7 @@
 \documentclass{ayudantia}
 \usepackage{multicol}
-\title{Ayudantía 04}
-\date{2020-08-27}
+\title{Ayudantía 05}
+\date{2020-09-01}
 \course{MAT1106 --- Introducción al Cálculo}
 
 % Comment for final compile
@@ -43,8 +43,8 @@
             0<\frac{a+b}2           & \leq\sqrt{\frac{a^2+b^2}2} & \iff \\
             0<\paren{\frac{a+b}2}^2 & \leq\frac{a^2+b^2}2        & \iff \\
             \frac{a^2+2ab+b^2}4     & \leq\frac{a^2+b^2}2        & \iff \\
-            0                       & \leq\frac{a^2-2ab+b^2}2    & \iff \\
-            0                       & \leq\frac{(a-b)^2}2        & \iff \\
+            0                       & \leq\frac{a^2-2ab+b^2}4    & \iff \\
+            0                       & \leq\frac{(a-b)^2}4        & \iff \\
         \end{align*}
         Y lo último es cierto.
     \end{sol}
@@ -62,11 +62,11 @@
     \begin{sol}
         Se tiene lo siguiente
         \begin{align*}
-            0<\sqrt{(a+c)(d+b)} & \geq\sqrt{ab}+\sqrt{cd}           & \iff \\
-            0<(a+c)(d+b)        & \geq\paren{\sqrt{ab}+\sqrt{cd}}^2 & \iff \\
-            ad+bc+ab+cd         & \geq ab+2\sqrt{abcd}+cd           & \iff \\
-            ad+bc               & \geq2\sqrt{abcd}                  & \iff \\
-            \frac{ad+bc}2       & \geq\sqrt{abcd}                   & \iff \\
+            \sqrt{(a+c)(d+b)} & \geq\sqrt{ab}+\sqrt{cd} >0          & \iff \\
+            (a+c)(d+b)        & \geq\paren{\sqrt{ab}+\sqrt{cd}}^2>0 & \iff \\
+            ad+bc+ab+cd       & \geq ab+2\sqrt{abcd}+cd             & \iff \\
+            ad+bc             & \geq2\sqrt{abcd}                    & \iff \\
+            \frac{ad+bc}2     & \geq\sqrt{abcd}                     & \iff \\
         \end{align*}
         y lo último es cierto por MA-MG.
     \end{sol}
@@ -113,31 +113,23 @@
             a_1(b_1-b_2)+a_2(b_2-b_1)    & >0              & \iff \\
             (a_1-a_2)(b_1-b_2)           & >0.
         \end{align*}
-        Lo que es cierto ya que \(a_1>a_2\) y \(b_1>b_2\). Para el caso \(n=k\) se asumen los casos \(n<k\), y sean \(a_1,\cdots,a_n\) y \(b_1,\cdots, b_n\) tales que \(a_i>a_{i+1}\) y \(b_i>b_{i+1}\) para \(1\leq i<n\). Sean \(a_i,b_j\) tales que \(j>1\) e \(i>1\), luego s.p.d.g. \(i\leq j\) y por la hipótesis inductiva sobre \(a_2,\cdots,a_{i-1},a_{i+1},\cdots,a_n\) y \(b_2,\cdots,b_{j-1},b_{j+1},\cdots,b_n\) se tiene que
-        \begin{equation*}
-            a_2b_2+\cdots+a_{i-1}b_{i-1}+a_{i+1}b_i+\cdots+a_jb_{j-1}+a_{j+1}b_{j+1}+\cdots+a_nb_n>S_{n-2}.
-        \end{equation*}
-        Dado eso, se tiene que
+        Lo que es cierto ya que \(a_1>a_2\) y \(b_1>b_2\). Para el caso \(n=k\) se asume \(n=k-1\), ahora sea \(S_n\) alguna permutación tal que \(a_1b_1\) no sea un término, entonces se tiene que \(S_n=a_1b_j+a_ib_j+T\), donde \(i,j>0\) y \(T\) corresponde al resto de los términos. Entonces, sea \(S_n'=a_1b_1+a_ib_i+T\), queremos demostrar que \(S_n'>S_n\), en otras palabras
         \begin{align*}
-            a_1b_1+a_ib_j+S_{n-2}      & >a1b_j+a_ib_1+S_{n-2} & \iff \\
-            a_1b_1+a_ib_j              & >a1b_j+a_ib_1         & \iff \\
-            a_1b_1+a_ib_j-a1b_j-a_ib_1 & >0                    & \iff \\
-            a_1(b_1-b_i)+a_i(b_j-b_1)  & >0                    & \iff \\
-            (a_1-a_j)(b_1-b_i)         & >0.
+            a_1b_1+a_ib_j+T&>a_1b_j+a_ib_1+T&\iff\\
+            a_1b_1+a_ib_j&>a_1b_j+a_ib_1&\iff\\
+            a_1b_1+a_ib_j-a_1b_j-a_ib_1&>0&\iff\\
+            a_1(b_1-b_j)-a_i(b_1-b_j)&>0&\iff\\
+            (a_1-a_i)(b_1-b_j)&>0,
         \end{align*}
-        Lo cual es verdad ya que \(a_1>a_j\) y \(b_1>b_j\), por último se tiene que
+        y esto último es verdad ya que \(a_1>a_i\) y \(b_1>b_j\). Ahora, se nota que \(a_2,\cdots,a_n\) y \(b_2,\cdots,b_n\) son \(n-1\) términos por lo que por inducción se tiene que
         \begin{equation*}
-            a_1b_1+a_ib_j+a_2b_2+\cdots+a_{i-1}b_{i-1}+a_{i+1}b_i+\cdots+a_jb_{j-1}+a_{j+1}b_{j+1}+\cdots+a_nb_n>a_1b_1+a_ib_j+S_{n-2}.
+            a_2b_2+\cdots+a_nb_n>a_ib_j+T,
         \end{equation*}
-        Por lo que aplicando la hipótesis inductiva sobre \(a_i,a_{i+1},\cdots,a_j\) y sobre \(b_i,\cdot, b_j\) se tiene que
+        por lo que
         \begin{equation*}
-            a_1b_1+\cdots+a_ib_i+\cdots+a_jb_j+\cdots+a_nb_n>a_1b_1+a_ib_j+\cdots+a_{i-1}b_{i-1}+a_{i+1}b_i+\cdots+a_jb_{j-1}+a_{j+1}b_{j+1}+\cdots+a_nb_n.
+            a_1b_1+\cdots+a_nb_n>a_1b_1+a_ib_j+T.
         \end{equation*}
-        Juntando las desigualdades usando transitividad y recordando que \(i,j\) eran arbitrarios, se tiene que
-        \begin{equation*}
-            a_1b_1+\cdots+a_ib_i+\cdots+a_jb_j+\cdots+a_nb_n>a1b_j+a_ib_1+S_{n-2}=S_n,
-        \end{equation*}
-        con lo que se demuestra la hipótesis inductiva.
+        Lo que es equivalente a decir que \(a_1b_1+\cdots+a_nb_n>S_n'\), con lo que usando transitividad se tiene lo pedido.\footnote{El caso donde \(a_1\) y \(b_1\) están juntos es equivalente a la desigualdad con \(S_n'\).}
     \end{sol}
 \end{ans}
 
