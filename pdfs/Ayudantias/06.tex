@@ -5,9 +5,9 @@
 \course{MAT1106 --- Introducción al Cálculo}
 
 % Comment for final compile
-\ifx\condition\undefined
-\def\condition{1}
-\fi
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
 
 \ifx\condition\undefined
 \immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
@@ -37,7 +37,28 @@
 
 \begin{ans}
     \begin{sol}
-
+        Se nota que \(x\neq 2\) y \(x\neq 1\), y se ve lo siguiente:
+        \begin{align*}
+            \frac3{1-x}<\frac{x+6}{2-x} & \iff 0<\frac{x+6}{2-x}-\frac3{1-x}          \\
+                                        & \iff 0<\frac{(x+6)(1-x)-3(2-x)}{(2-x)(1-x)} \\
+                                        & \iff 0<\frac{x+6-x^2-6x-6+3x}{(2-x)(1-x)}   \\
+                                        & \iff 0< -\frac{x(x+2)}{(2-x)(1-x)}          \\
+                                        & \iff 0< -\frac{x(x+2)}{(x-2)(x-1)}          \\
+        \end{align*}
+        Por lo que viendo la siguiente tabla:
+        \begin{center}
+            \begin{tabular}{c|c|c|c|c|c|}
+                                               & \((-\infty,-2)\) & \((-2,0)\) & \((0,1)\) & \((1,2)\) & \((2,\infty)\) \\
+                \hline\hline
+                \(x+2\)                        &-&+&+&+&+\\
+                \(x\)                          &-&-&+&+&+\\
+                \(x-1\)                        &-&-&-&+&+\\
+                \(x-2\)                        &-&-&-&-&+\\
+                \hline
+                \(-\frac{x(x+2)}{(x-2)(x-1)}\) &-&+&-&+&-\\
+            \end{tabular}
+        \end{center}
+        Por lo que se tiene que \(x\in(-2,0)\cup(1,2)\).
     \end{sol}
 \end{ans}
 
@@ -51,7 +72,7 @@
 
 \begin{ans}
     \begin{sol}
-
+        Se nota que \(x\neq\alpha\), ya que si \(x=\alpha\) se tiene \(0\abs{x^2-\alpha^2}>\abs{x-\alpha}=0\). Y si \(x\neq\alpha\) se tiene que \(\abs{x-\alpha}>0\), por lo que \(\abs{x+\alpha}>1\). Por lo que \(x>1-\alpha\) o \(x<-1-\alpha\) por lo que \(x\in((-\infty,-1-\alpha)\cup(1-\alpha,\infty))\setminus\{\alpha\}\).
     \end{sol}
 \end{ans}
 
@@ -93,8 +114,8 @@
         \end{equation*}
         Usando la desigualdad demostrada la ayudantía pasada se tiene que
         \begin{align*}
-            \frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b}&\geq\frac{b}{b+c}+\frac{c}{a+c}+\frac{a}{a+b}\\
-            \frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b}&\geq\frac{c}{b+c}+\frac{a}{a+c}+\frac{b}{a+b}\\
+            \frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b} & \geq\frac{b}{b+c}+\frac{c}{a+c}+\frac{a}{a+b} \\
+            \frac{a}{b+c}+\frac{b}{a+c}+\frac{c}{a+b} & \geq\frac{c}{b+c}+\frac{a}{a+c}+\frac{b}{a+b} \\
         \end{align*}
         Sumando ambas desigualdades se tiene
         \begin{equation*}
