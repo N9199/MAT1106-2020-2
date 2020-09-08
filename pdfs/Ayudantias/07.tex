@@ -1,0 +1,91 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 07}
+\date{2020-09-08}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Demuestre por inducción que \(n^2\geq n\) para todo \(n\in\set{N}\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        \((n+1)^2=n^2+2n+1\geq n+2n+1=3n+1\geq n\)
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Usando la notación \(\{(x+y)_n\}_{n\in\set{N}}\) para la sucesión definida como \((x+y)_n=x_n+y_n\), y \(\{(xy)_n\}_{n\in\set{N}}\) para la sucesión definida como \((xy)_n=x_ny_n\). Determine si las siguientes proposiciones son verdaderas o falsas. Si es verdadero demuestre, en caso contrario de contraejemplo.
+    \begin{enumerate}
+        \item Si \(\{x_n\}_{n\in\set{N}}\) y \(\{y_n\}_{n\in\set{N}}\) son crecientes, entonces \(\{(x+y)_n\}_{n\in\set{N}}\) es creciente.
+        \item Si \(\{x_n\}_{n\in\set{N}}\) y \(\{y_n\}_{n\in\set{N}}\) son crecientes, entonces \(\{(xy)_n\}_{n\in\set{N}}\) es creciente.
+        \item Si \(\{x_n\}_{n\in\set{N}}\) y \(\{y_n\}_{n\in\set{N}}\) son monótonas, entonces \(\{(x+y)_n\}_{n\in\set{N}}\) es monótona.
+        \item Si \(\{x_n\}_{n\in\set{N}}\) y \(\{y_n\}_{n\in\set{N}}\) son monótonas, entonces \(\{(xy)_n\}_{n\in\set{N}}\) es monótona.
+        \item Si \(\{x_n\}_{n\in\set{N}}\) es monótona, entonces \(\{(x^2)_n\}_{n\in\set{N}}\) es creciente.
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        \begin{enumerate}
+            \item V
+            \item F \(x_n=n\), \(y_n=-1\)
+            \item F \(x_n=n^2\), \(y_n=-n!\)
+            \item F \(x_n=n^2\), \(y_n=(n!)^{-1}\)
+            \item F \(x_n=n-2\)
+        \end{enumerate}
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sean \(n\in\set{N}\), \(\alpha>1\). Demuestre que existe una constante \(C>0\) tal que \(\alpha^n>Cn\) para todo \(n\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Usar Bernoulli
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre que la siguiente sucesión es creciente
+    \begin{equation*}
+        a_n=\paren{1+\frac1n}^n
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Tomar \(a_n/a_{n+1}\) y usar Bernoulli.
+    \end{sol}
+\end{ans}
+
+
+\end{document}
