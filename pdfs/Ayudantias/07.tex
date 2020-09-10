@@ -34,7 +34,14 @@
 
 \begin{ans}
     \begin{sol}
-        \((n+1)^2=n^2+2n+1\geq n+2n+1=3n+1\geq n\)
+        Usando inducción, para \(n=1\) se tiene que \(1^2\geq 1\). Ahora, para el caso inductivo:
+        \begin{align*}
+            (n+1)^2&=n^2+2n+1\\
+            &\geq n^2+2n+1\\
+            &\geq n+2n+1\\
+            &\geq n+1
+        \end{align*}
+        Quedando demostrado el caso inductivo.
     \end{sol}
 \end{ans}
 
@@ -53,11 +60,11 @@
 \begin{ans}
     \begin{sol}
         \begin{enumerate}
-            \item V
-            \item F \(x_n=n\), \(y_n=-1\)
-            \item F \(x_n=n^2\), \(y_n=-n!\)
-            \item F \(x_n=n^2\), \(y_n=(n!)^{-1}\)
-            \item F \(x_n=n-2\)
+            \item Es verdadero, se tiene que \(x_n+y_n\leq x_{n+1}+y_n\leq x_{n+1}+y_{n+1}\), por lo que \((x+y)_n\leq (x+y)_{n+1}\).
+            \item Es falso, se consideran \(x_n=n\) e \(y_n=-1\).
+            \item Es falso, se consideran \(x_n=n^2\) e \(y_n=-n!\), entonces \((x+y)_1=0,(x+y)_2=2,(x+y)_3=3,(x+y)_4=-8\).
+            \item Es falso, se consideran \(x_n=n^2\) e \(y_n=(n!)^{-1}\), entonces \((xy)_1=1,(xy)_2=2,(xy)_3=\frac32,(xy)_4=\frac23\).
+            \item Es falso, se considera \(x_n=n-2\), entonces \((x^2)_1=1,(x^2)_2=0,(x^2)_3=1\).
         \end{enumerate}
     \end{sol}
 \end{ans}
@@ -69,7 +76,13 @@
 
 \begin{ans}
     \begin{sol}
-        Usar Bernoulli
+        Se ve lo siguiente:
+        \begin{align*}
+            \alpha^n&=(1+(\alpha-1))^n\\
+            &\geq1+n(\alpha-1)\qquad\text{Por Bernoulli}\\
+            &>n(\alpha-1)
+        \end{align*}
+        Entonces tomando \(C=\alpha-1\) se tiene lo pedido.
     \end{sol}
 \end{ans}
 
@@ -83,7 +96,21 @@
 
 \begin{ans}
     \begin{sol}
-        Tomar \(a_n/a_{n+1}\) y usar Bernoulli.
+        Para demostrar que \(a_n\) es creciente se demostrará que \(a_{n+1}/a_n\geq1\). Se ve lo siguiente:
+        \begin{align*}
+            \frac{a_{n+1}}{a_n}&=\frac{\paren{1+\frac1{n+1}}^{n+1}}{\paren{1+\frac1n}^n}\\
+            &=\paren{1+\frac1{n+1}}\paren{\frac{1+\frac1{n+1}}{1+\frac1n}}^n\\
+            &=\paren{\frac{n+2}{n+1}}\paren{\frac{\frac{n+2}{n+1}}{\frac{n+1}n}}^n\\
+            &=\paren{\frac{n+2}{n+1}}\paren{\frac{n(n+2)}{(n+1)^2}}^n\\
+            &=\paren{\frac{n+2}{n+1}}\paren{1-\frac1{(n+1)^2}}^n\\
+            &\geq\paren{\frac{n+2}{n+1}}\paren{1-\frac{n}{(n+1)^2}}\\
+            &\geq^*\paren{\frac{n+2}{n+1}}\paren{\frac{n+1}{n+2}}\\
+            &\geq1\\
+        \end{align*}
+        Para el \(\geq^*\) se ve que
+        \begin{equation*}
+            1-\frac{n}{(n+1)^2}=\frac{n^2+n+1}{(n+1)^2}=\frac{(n^2+n+1)(n+2)}{(n+1)^2(n+2)}\geq\frac{(n+1)^3}{(n+1)^2(n+2)}=\frac{n+1}{n+2}
+        \end{equation*}
     \end{sol}
 \end{ans}
 
