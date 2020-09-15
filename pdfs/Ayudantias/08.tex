@@ -1,0 +1,109 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 08}
+\date{2020-09-15}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}\textit{(I6 2018)}
+    Considere \(x_n=\frac{n!}{n^n}\)
+    \begin{enumerate}[label=(\alph*)]
+        \item Demuestre que
+        \begin{equation*}
+            \frac{x_{n+1}}{x_n}\leq\frac12
+        \end{equation*}
+        \item Demuestre que
+        \begin{equation*}
+            0\leq x_n\leq\frac1{2^{n-1}}
+        \end{equation*}
+        para todo \(n\in\set{N}\).
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        \begin{enumerate}[label=(\alph*)]
+            \item Desglosar
+            \item Usar inducción más la parte anterior
+        \end{enumerate}
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre que \(x_n\) es monótona si y solo si todas las subsucesiones también son monótonas.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        \(\implies\) trivial
+        
+        \(\impliedby\) contrapositiva
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Para \(a>0\), se definen las funciones
+    \begin{equation*}
+        f(x)=x^3-2\qquad\text{y}\qquad g_a(x)=a^3-2+3a^2(x-a)
+    \end{equation*}
+    \begin{enumerate}[label=(\alph*)]
+        \item Demuestre que
+        \begin{equation*}
+            f(x)-g_a(x)=(x-a)^2(x+2a)
+        \end{equation*}
+        y concluya que \(f(x)\geq g_a(x)\) para todo \(x\geq 0\).
+        \item Ahora, sea \(x_n\) una sucesión tal que \(x_1=2\) y \(x_{n+1}\) cumple
+        \begin{equation*}
+            g_{x_n}(x_{n+1})=0
+        \end{equation*}
+        Demuestre que está sucesión es monótona.
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        \begin{enumerate}[label=(\alph*)]
+            \item Hacer lo esperado.
+            \item Ídem.
+        \end{enumerate}
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Encuentre condiciones necesarias y suficientes para que una sucesión tenga una cantidad finita de subsucesiones.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Eventualmente constante
+    \end{sol}
+\end{ans}
+
+
+\end{document}

@@ -4,7 +4,7 @@ title: Índice
 
 # {{page.title}}
 
-**Última actualización: Miércoles 09/09 (Ayudantía 07)**
+**Última actualización: Lunes 14/09 (Ayudantía 08)**
 
 ## Ayudantías
 
@@ -14,10 +14,10 @@ title: Índice
 - Ayudantía 04 (Desigualdad MA-MG) - [Enunciado](pdfs/Enunciados/Enunciado04.pdf) - [Solución](pdfs/Soluciones/Solucion04.pdf)
 - Ayudantía 05 (Desigualdad MA-MG y Desigualdades) - [Enunciado](pdfs/Enunciados/Enunciado05.pdf) - [Solución](pdfs/Soluciones/Solucion05.pdf)
 - Ayudantía 06 (Inecuaciones) - [Enunciado](pdfs/Enunciados/Enunciado06.pdf) - [Solución](pdfs/Soluciones/Solucion06.pdf)
-- Ayudantía 06 (Monotonía y Desigualdad de Bernoulli) - [Enunciado](pdfs/Enunciados/Enunciado07.pdf) - [Solución](pdfs/Soluciones/Solucion07.pdf)
+- Ayudantía 07 (Monotonía y Desigualdad de Bernoulli) - [Enunciado](pdfs/Enunciados/Enunciado07.pdf) - [Solución](pdfs/Soluciones/Solucion07.pdf)
+- Ayudantía 08 (Monotonía y Subsucesiones) - [Enunciado](pdfs/Enunciados/Enunciado08.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion08.pdf) -->
 
 ## Otros
-El jueves 10/09 (última ayudantía antes de la I1) será una ayudantía de repaso, por esto les pido que traigan dudas para esa ayudantía.
-
+El jueves 17 de septiembre **no** hay ayudantía, ya que las clases terminan a las 13:00hrs.
 
 [Acerca de](about)
