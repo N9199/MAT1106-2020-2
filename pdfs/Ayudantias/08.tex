@@ -32,22 +32,34 @@
     Considere \(x_n=\frac{n!}{n^n}\)
     \begin{enumerate}[label=(\alph*)]
         \item Demuestre que
-        \begin{equation*}
-            \frac{x_{n+1}}{x_n}\leq\frac12
-        \end{equation*}
+              \begin{equation*}
+                  \frac{x_{n+1}}{x_n}\leq\frac12
+              \end{equation*}
         \item Demuestre que
-        \begin{equation*}
-            0\leq x_n\leq\frac1{2^{n-1}}
-        \end{equation*}
-        para todo \(n\in\set{N}\).
+              \begin{equation*}
+                  0\leq x_n\leq\frac1{2^{n-1}}
+              \end{equation*}
+              para todo \(n\in\set{N}\).
     \end{enumerate}
 \end{prob}
 
 \begin{ans}
     \begin{sol}
         \begin{enumerate}[label=(\alph*)]
-            \item Desglosar
-            \item Usar inducción más la parte anterior
+            \item Para demostrar esto es suficiente demostrar que \(\frac{x_n}{x_{n+1}}\geq 2\).
+                  \begin{align*}
+                      \frac{x_n}{x_{n+1}} & =\frac{\frac{n!}{n^n}}{\frac{(n+1)!}{(n+1)^{n+1}}}\\
+                      & =\frac{\frac{n!}{n^n}}{\frac{n!}{(n+1)^n}}\\
+                      & =\paren{\frac{n+1}n}^n\\
+                      & =\paren{1+\frac{1}n}^n\\
+                      &\geq =1+n\cdot\frac1n\\
+                      &\geq =2\\
+                  \end{align*}
+            \item Para esto, se usará inducción. Para \(n=1\) se tiene que \(x_1=1\), lo que cumple lo pedido. Ahora, asumiendo que se cumple para \(n-1\), además se recuerda lo demostrado anteriormente \(x_{n+1}\leq\frac12x_n\), y se ve lo siguiente
+            \begin{equation*}
+                x_{n+1}\leq\frac12x_n\leq\frac1{2\cdot 2^{n-1}}=\frac1{2^n}
+            \end{equation*}
+            La otra desigualdad es por definición.
         \end{enumerate}
     \end{sol}
 \end{ans}
@@ -58,10 +70,10 @@
 \end{prob}
 
 \begin{ans}
-    \begin{sol}
-        \(\implies\) Hacerlo a manito
-        
-        \(\impliedby\) trivial
+    \begin{sol}\
+        \(\implies\) Demostrado en clase.
+
+        \(\impliedby\) Se nota que \(x_n\) es subsucesión de \(x_n\) por lo que \(x_n\) es monótona.
     \end{sol}
 \end{ans}
 
@@ -73,23 +85,32 @@
     \end{equation*}
     \begin{enumerate}[label=(\alph*)]
         \item Demuestre que
-        \begin{equation*}
-            f(x)-g_a(x)=(x-a)^2(x+2a)
-        \end{equation*}
-        y concluya que \(f(x)\geq g_a(x)\) para todo \(x\geq 0\).
+              \begin{equation*}
+                  f(x)-g_a(x)=(x-a)^2(x+2a)
+              \end{equation*}
+              y concluya que \(f(x)\geq g_a(x)\) para todo \(x\geq 0\).
         \item Ahora, sea \(x_n\) una sucesión tal que \(x_1=2\) y \(x_{n+1}\) cumple
-        \begin{equation*}
-            g_{x_n}(x_{n+1})=0
-        \end{equation*}
-        Demuestre que está sucesión es monótona.
+              \begin{equation*}
+                  g_{x_n}(x_{n+1})=0\qquad\text{y}\qquad x_{n+1}\geq0
+              \end{equation*}
+              Demuestre que está sucesión es monótona.
     \end{enumerate}
 \end{prob}
 
 \begin{ans}
     \begin{sol}
         \begin{enumerate}[label=(\alph*)]
-            \item Hacer lo esperado.
-            \item Ídem.
+            \item Se ve lo siguiente:
+            \begin{align*}
+                f(x)-g_a(x)&=x^3-2-a^3+2-3a^2(x-a)\\
+                &=x^3-a^3-3a^2(x-a)\\
+                &=(x^2+ax+a^2-3a^2)(x-a)\\
+                &=(x^2+ax-2a^2)(x-a)\\
+                &=(x-a)(x+2a)(x-a)\\
+                &=(x-a)^2(x+2a)\\
+            \end{align*}
+            Ahora, como \(x\geq0\), \(a>0\) y \((x-a)^2\geq0\) se tiene que \(f(x)-g_a(x)\geq0\)
+            \item Usando inducción se demostrará que \(\sqrt[3]{2}\leq x_{n+1}\leq x_n\). Para el caso \(n=1\) se tiene que \(x_1=2\geq\sqrt[3]{2}\), y como \(g_{x_1}(x_2)=0\) se tiene que \(x_1^3-2+3x_1^2(x_2-x_1)=0\), como \(x_1^3-2\geq0\) y \(3x_1^2\geq0\) se tiene que \(x_2\geq x_1\). Ahora, de forma similar se hará el caso inductivo.
         \end{enumerate}
     \end{sol}
 \end{ans}
@@ -101,7 +122,13 @@
 
 \begin{ans}
     \begin{sol}
-        Eventualmente constante
+        Se ve que una sucesión eventualmente constante cumple que tiene una cantidad finita de subsucesiones. Por lo que se demostrará que si una sucesión tiene finitas subsucesiones, entonces es eventualmente constante por contra-positiva.
+
+        Sea \(x_n\) un sucesión que no es eventualmente constante. Se ve el siguiente conjunto \(S=\{x_n : n\in\set{N}\}\). Se tienen dos casos:
+        \begin{enumerate}[label={Caso \arabic*:}]
+            \item \(2\leq\abs{S}<\infty\)\footnote{Si \(\abs{S}=1\), la sucesión tiene que ser constante.} Entonces existe algún \(a\in S\) tal que \(x_n=a\) infinitas veces. Ahora, vemos las subsucesiones que son de la forma \(k\) \(a\), un \(b\) donde \(b\neq a\) y después toda lo que queda de la subsucesión. Lo que nos dice que tenemos infinitas subsucesiones.
+            \item \(\abs{S}=\infty\) Para cada elemento \(x\in S\), se tiene que existe un \(n_{0,x}\), tal que \(x_{n_{0,x}}=x\) y \(x_{n_k}\neq x\) para \(k<n_{0,x}\). Como se puede definir la subsucesión que comienza en \(n_{0,x}\), y como tenemos infinitos \(n_{0,x}\), se tienen infinitas subsucesiones.
+        \end{enumerate}
     \end{sol}
 \end{ans}
 

@@ -4,7 +4,7 @@ title: Índice
 
 # {{page.title}}
 
-**Última actualización: Lunes 14/09 (Ayudantía 08)**
+**Última actualización: Lunes 28/09 (Ayudantía 09 y Solución Ayudantía 08)**
 
 ## Ayudantías
 
@@ -15,7 +15,8 @@ title: Índice
 - Ayudantía 05 (Desigualdad MA-MG y Desigualdades) - [Enunciado](pdfs/Enunciados/Enunciado05.pdf) - [Solución](pdfs/Soluciones/Solucion05.pdf)
 - Ayudantía 06 (Inecuaciones) - [Enunciado](pdfs/Enunciados/Enunciado06.pdf) - [Solución](pdfs/Soluciones/Solucion06.pdf)
 - Ayudantía 07 (Monotonía y Desigualdad de Bernoulli) - [Enunciado](pdfs/Enunciados/Enunciado07.pdf) - [Solución](pdfs/Soluciones/Solucion07.pdf)
-- Ayudantía 08 (Monotonía y Subsucesiones) - [Enunciado](pdfs/Enunciados/Enunciado08.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion08.pdf) -->
+- Ayudantía 08 (Monotonía y Subsucesiones) - [Enunciado](pdfs/Enunciados/Enunciado08.pdf) - [Solución](pdfs/Soluciones/Solucion08.pdf)
+- Ayudantía 09 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado09.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion09.pdf) -->
 
 ## Otros
 El jueves 17 de septiembre **no** hay ayudantía, ya que las clases terminan a las 13:00hrs.
