@@ -1,0 +1,111 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 10}
+\date{2020-10-01}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Sea \(A\subset\set{R}\) un conjunto finito no vacío, demuestre que existen \(m,M\in A\) tales que para todo \(a\in A\) se tiene \(m\leq a\leq M\). \(m\) y \(M\) se denotarán como el mínimo de \(A\)\footnote{\(m=\min A\)} y el máximo de \(A\)\footnote{\(M=\max A\)}, respectivamente.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        Inducción sobre el tamaño del conjunto. Se escribe \(A=\{a\}\cup(A\setminus\{a\})\).
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    \begin{enumerate}
+        \item Sea \(x_n\) una sucesión acotada, demuestre que toda subsucesión es acotada.
+        \item Sea \(x_n\) una sucesión monótona no acotada, demuestre que toda subsucesión es no acotada.
+        \item Encuentre una sucesión no acotada \(x_n\), tal que tiene al menos una subsucesión acotada. ¿Existe alguna que tenga infinitas subsucesiones acotadas?
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        \begin{enumerate}
+            \item Contradicción y definición.
+            \item Contradicción, buen orden sobre los indices de subsucesión acotada.
+            \item \(x_{2n}=n,x_{2n+1}=0\)
+        \end{enumerate}
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sea \(x_n\) una sucesión de números enteros, demuestre que \(x_n\) siempre cumple al menos una de las siguientes propiedades:
+    \begin{enumerate}[label=(\alph*)]
+        \item Tiene una cantidad finita de términos distintos, en otras palabras el conjunto \(S=\{x_n:n\in\set{N}\}\) es finito.
+        \item Es no acotada.
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sea
+    \begin{equation*}
+        x_n=\sum_{k=1}^n\frac1k
+    \end{equation*}
+    Demuestre que para todo \(n\), se tiene que
+    \begin{equation*}
+        x_{2^n}\geq\frac{n+1}2.
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sea
+    \begin{equation*}
+        x_n=\sum_{k=1}^n\frac1{k^2}
+    \end{equation*}
+    ¿Existe algún valor \(n\) tal que \(x_n>2\)?
+
+    \noindent\textit{Hint: Vea que para \(k\geq2\) se tiene \(\frac1{k^2}\leq\frac1{k(k-1)}=\frac1k-\frac1{k-1}\).}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+\end{document}
