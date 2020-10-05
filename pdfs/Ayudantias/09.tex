@@ -40,9 +40,9 @@
 \begin{ans}
     \begin{sol}
         \begin{enumerate}[label=(\alph*)]
-            \item V
-            \item V
-            \item F \(x_n=\frac{(-1)^n}n\)
+            \item Se tiene que \(\abs{x_n}\leq M_1,\abs{y}\leq M_2\) ve que \(\abs{x_n+y_n}\leq\abs{x_n}+\abs{y_n}\leq M_1+M_2\), por lo que es acotada.
+            \item Se tiene que \(\abs{x_n}\leq M_1,\abs{y}\leq M_2\) ve que \(\abs{x_n\cdot y_n}=\abs{x_n}\cdot\abs{y_n}\leq M_1\cdot M_2\), por lo que es acotada.
+            \item Se ve que \(x_n=\frac{(-1)^n}n\) es un contraejemplo.
         \end{enumerate}
     \end{sol}
 \end{ans}
@@ -70,7 +70,11 @@
 
 \begin{ans}
     \begin{sol}
-        
+        \begin{itemize}
+            \item[\(a\implies c\):] Sea \(\alpha\in\set{R}\) y \(\varepsilon>0\) se tiene que \(x=\frac\alpha\varepsilon\in\set{R}\), por lo que existe un \(n\in\set{N}\) tal que \(x<n\), o equivalentemente existe un \(n\in\set{N}\) tal que \(\alpha<n\varepsilon\).
+            \item[\(c\implies b\):] Sea \(\varepsilon>0\), se toma \(\alpha=1\), por lo que existe un \(n\in\set{N}\) tal que \(\alpha<n\varepsilon\), o equivalentemente \(\frac1n<\varepsilon\).
+            \item[\(b\implies a\)] Se tienen dos casos, si \(x\leq0\) se tiene que \(n=1\) cumple, si \(x>0\) se toma \(\varepsilon=x\) y se tiene que existe \(n\in\set{N}\) tal que \(\frac1n<\varepsilon\), que es equivalente a \(x<n\).
+        \end{itemize}
     \end{sol}
 \end{ans}
 
@@ -92,7 +96,23 @@
 
 \begin{ans}
     \begin{sol}
-        Inducción nos da monotonía. Si es decreciente es trivialmente acotada. Si es creciente, \(x_{n+1}\leq\frac\alpha{x_n}+\beta\leq\frac\alpha{x_1}+\beta\).
+        Se ve lo siguiente:
+        \begin{align*}
+            x_n                     & \leq x_{n+1}                     \\
+            \beta x_n               & \leq \beta x_{n+1}               \\
+            \alpha+\beta x_n        & \leq \alpha+\beta x_{n+1}        \\
+            \sqrt{\alpha+\beta x_n} & \leq \sqrt{\alpha+\beta x_{n+1}} \\
+            x_{n+1}                 & \leq x_{n+2}                     \\
+        \end{align*}
+        Se nota, que esto funciona para \(\geq\), ahora por tricotomía se tiene que \(x_1\leq x_2\) o \(x_2\geq x_1\), por lo que usando ese paso inductivo se tiene que \(x_n\) es monótona.
+        Para ver que es acotada se tienen dos casos, si es decreciente es trivialmente acotada, \(x_n\geq\min(0,x_0)\) y \(x_n\leq x_0\). Si es creciente, se ve lo siguiente
+        \begin{align*}
+            x_n & =\sqrt{\alpha+\beta x_{n-1}} \\
+            x_n^2 & =\alpha+\beta x_{n-1} \\
+            x_n\cdot x_{n-1} & \leq x_n^2=\alpha+\beta x_{n-1} \\
+            x_n&\leq\frac\alpha{x_{n-1}}+\beta\leq\frac\alpha{x_1}+\beta
+        \end{align*}
+        Con lo que tenemos que es acotada.
     \end{sol}
 \end{ans}
 

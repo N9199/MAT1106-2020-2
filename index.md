@@ -4,7 +4,7 @@ title: Índice
 
 # {{page.title}}
 
-**Última actualización: Miércoles 28/09 (Ayudantía 10)**
+**Última actualización: Lunes 05/10 (Ayudantía 11 y Soluciones Ayudantía 09 y 10)**
 
 ## Ayudantías
 
@@ -16,8 +16,9 @@ title: Índice
 - Ayudantía 06 (Inecuaciones) - [Enunciado](pdfs/Enunciados/Enunciado06.pdf) - [Solución](pdfs/Soluciones/Solucion06.pdf)
 - Ayudantía 07 (Monotonía y Desigualdad de Bernoulli) - [Enunciado](pdfs/Enunciados/Enunciado07.pdf) - [Solución](pdfs/Soluciones/Solucion07.pdf)
 - Ayudantía 08 (Monotonía y Subsucesiones) - [Enunciado](pdfs/Enunciados/Enunciado08.pdf) - [Solución](pdfs/Soluciones/Solucion08.pdf)
-- Ayudantía 09 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado09.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion09.pdf) -->
-- Ayudantía 10 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado10.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion10.pdf) -->
+- Ayudantía 09 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado09.pdf) - [Solución](pdfs/Soluciones/Solucion09.pdf)
+- Ayudantía 10 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado10.pdf) - [Solución](pdfs/Soluciones/Solucion10.pdf)
+- Ayudantía 11 (Sucesiones, ACD y Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado11.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion11.pdf) -->
 
 ## Otros
 La Solución de la Ayudantía 09 y 10 estarán subidas el mismo día.

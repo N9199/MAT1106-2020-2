@@ -34,7 +34,7 @@
 
 \begin{ans}
     \begin{sol}
-        Inducción sobre el tamaño del conjunto. Se escribe \(A=\{a\}\cup(A\setminus\{a\})\).
+        Se hace Inducción sobre el tamaño de \(A\), si \(\abs{A}=1\), se tiene que \(A=\{a\}\), por lo que \(m=M=a\) cumple lo pedido. Para el paso inductivo, se tiene que \(\abs{A}=n\), como es finito podemos escoger un \(a'\in A\) y reescribimos \(A=\{a'\}\cup(A\setminus\{a'\})\), ahora \(\abs{A\setminus\{a\}}=n-1\), por lo que por hipótesis inductiva tenemos que \(\exists m',M'\in A\setminus\{a\}\quad\forall a\in A\setminus\{a'\}\quad m'\leq a\leq M'\), ahora se nota que \(m=\min(a',m')\leq a\leq M=\max(a',M')\) para todo \(a\in A\), por lo que se tiene lo pedido.
     \end{sol}
 \end{ans}
 
@@ -50,9 +50,9 @@
 \begin{ans}
     \begin{sol}
         \begin{enumerate}
-            \item Contradicción y definición.
-            \item Contradicción, buen orden sobre los indices de subsucesión acotada.
-            \item \(x_{2n}=n,x_{2n+1}=0\)
+            \item Sea \(x_{n_k}\) subsucesión de \(x_n\), por definición se tiene que existe un \(M\in\set{R}\) tal que \(\forall n\in\set{N} \abs{x_n}<M\), como \(\{n_k:k\in\set{N}\}\subset\set{N}\) se tiene que \(\forall k\in \set{N}\abs{x_{n_k}}\leq M\).
+            \item Sea \(x_{n_k}\) subsucesión de \(x_n\), se tiene que \(x_{n_k}\) ``hereda'' la monotonía de \(x_n\), ahora s.p.d.g. \(x_n\) es creciente por lo que es acotada inferiormente, por lo que no es acotada superiormente\footnote{Si lo fuera \(x_n\) sería una sucesión acotada}. Dicho eso, sea \(M\in\set{R}\), por lo anterior se tiene que existe un \(n_0\in\set{N}\) tal que \(x_{n_0}>M\), sea \(S_{n_0}={k\in\set{N}:n_k\geq n_0}\), se ve que \(S_{n_0}\) es un subconjunto no vacío de \(\set{N}\), por lo que tiene un mínimo, que se denotara \(k_0\), luego se tiene que \(n_{k_0}\geq n_0\) por lo que \(x_{n_{k_0}}\geq x_{n_0}>M\), por lo que \(x_{n_k}\) no es acotada.
+            \item Se ve la siguiente sucesión \(x_{2n}=n,x_{2n+1}=0\), para infinitas considere \(x_{2n}=n,x_{2n+1}=\frac1n\).
         \end{enumerate}
     \end{sol}
 \end{ans}
@@ -68,44 +68,8 @@
 
 \begin{ans}
     \begin{sol}
-
+        Sea \(S=\{\abs{x_n}:n\in\set{N}\}\subset\set{N}\), se ve que si \(x_n\) es acotada existe un \(M\in\set{R}\) tal que \(\forall a\in S a<M\), ahora, por propiedad arquimediana existe un \(n\in\set{N}\) tal que \(n>M\), por lo que se tiene que \(S\subseteq\{0,1,\ldots,n\}\), por lo que \(\abs{S}\leq n+1\), por lo que \(S\) tiene finitos elementos. Ahora si, \(x_n\) no tiene finitos términos se tiene que \(\abs{S}=\infty\), pero si \(x_n\) es acotado se tiene que \(S\) es finito, por lo que \(x_n\) no es acotada.
     \end{sol}
 \end{ans}
-
-
-\begin{prob}
-    Sea
-    \begin{equation*}
-        x_n=\sum_{k=1}^n\frac1k
-    \end{equation*}
-    Demuestre que para todo \(n\), se tiene que
-    \begin{equation*}
-        x_{2^n}\geq\frac{n+1}2.
-    \end{equation*}
-\end{prob}
-
-\begin{ans}
-    \begin{sol}
-
-    \end{sol}
-\end{ans}
-
-
-\begin{prob}
-    Sea
-    \begin{equation*}
-        x_n=\sum_{k=1}^n\frac1{k^2}
-    \end{equation*}
-    ¿Existe algún valor \(n\) tal que \(x_n>2\)?
-
-    \noindent\textit{Hint: Vea que para \(k\geq2\) se tiene \(\frac1{k^2}\leq\frac1{k(k-1)}=\frac1k-\frac1{k-1}\).}
-\end{prob}
-
-\begin{ans}
-    \begin{sol}
-
-    \end{sol}
-\end{ans}
-
 
 \end{document}
