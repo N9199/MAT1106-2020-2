@@ -4,7 +4,7 @@ title: Índice
 
 # {{page.title}}
 
-**Última actualización: Lunes 05/10 (Ayudantía 11 y Soluciones Ayudantía 09 y 10)**
+**Última actualización: Miércoles 07/10 (Ayudantía 12)**
 
 ## Ayudantías
 
@@ -19,8 +19,6 @@ title: Índice
 - Ayudantía 09 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado09.pdf) - [Solución](pdfs/Soluciones/Solucion09.pdf)
 - Ayudantía 10 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado10.pdf) - [Solución](pdfs/Soluciones/Solucion10.pdf)
 - Ayudantía 11 (Sucesiones, ACD y Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado11.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion11.pdf) -->
-
-## Otros
-La Solución de la Ayudantía 09 y 10 estarán subidas el mismo día.
+- Ayudantía 12 (Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado12.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion11.pdf) -->
 
 [Acerca de](about)
