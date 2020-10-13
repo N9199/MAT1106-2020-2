@@ -1,0 +1,96 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 13}
+\date{2020-10-13}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+
+\begin{prob}
+    Demuestre que las siguientes sucesiones convergen a cero:
+    \begin{enumerate}
+        \item \(\ds x_n=\frac{1+2+\ldots+n}{n^3}\)
+        \item \(\ds x_n=\frac{1+3+\ldots+(2n+1)}{n^3}\)
+        \item \(\ds x_n=\frac{1+4+\ldots+n^2}{n^4}\)
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea \(x_n\) una sucesión. Demuestre que \(\lim_{n\rightarrow\infty}x_n=0\) si y solo si para todo \(k\in\set{R}\) \(\lim_{n\rightarrow\infty}k\cdot x_n=0\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea \(x_n\) tal que \(\lim_{n\rightarrow\infty}x_n=0\), y sea \(y_n\) una sucesión acotada, demuestre que \(\lim_{n\rightarrow\infty}x_ny_n=0\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea \(x_n\) tal que \(x_n\neq0\) para todo \(n\in\set{N}\). Demuestre que si \(\lim_{n\rightarrow\infty}x_n=0\), entonces \(\frac1{x_n}\) no está acotada.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Demuestre que si \(\lim_{n\rightarrow\infty}x_n=\infty\), entonces \(\lim_{n\rightarrow\infty}\frac1{x_n}=0\). ¿Es verdad el recíproco? Si lo es, demuestrelo, si no lo es, encuentre condiciones necesarias y suficientes.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+\end{document}
+
+
