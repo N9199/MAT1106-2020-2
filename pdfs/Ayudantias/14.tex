@@ -1,7 +1,7 @@
 \documentclass{ayudantia}
 \usepackage{multicol}
-\title{Ayudantía 13}
-\date{2020-10-13}
+\title{Ayudantía 14}
+\date{2020-10-15}
 \course{MAT1106 --- Introducción al Cálculo}
 
 % Comment for final compile
@@ -30,24 +30,38 @@
 
 
 \begin{prob}
+    Sea \(x_n=1-0,\underbrace{99\ldots9}_{\text{n 9s}}\). Demuestre que \(\lim_{n\rightarrow\infty}x_n=0\)
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+\end{sol}
+\end{ans}
+
+
+
+\begin{prob}
     Demuestre que las siguientes sucesiones convergen a cero:
     \begin{enumerate}
-        \item \(\ds x_n=\frac{1+2+\ldots+n}{n^3}\)
-        \item \(\ds x_n=\frac{1+3+\ldots+(2n-1)}{n^3}\)
-        \item \(\ds x_n=\frac{1+4+\ldots+n^2}{n^4}\)
+        \item \(x_n=\frac{\sin(n)}n\)
+        \item \(x_n=n\sin(1/n)-1\)
     \end{enumerate}
 \end{prob}
 
 \begin{ans}
     \begin{sol}
-
-    \end{sol}
+        \begin{enumerate}
+            \item \(\abs{\sin(n)}\leq1\)
+            \item Ver circulo unitario y notar que \(\sin(\theta)\leq\theta\leq\tan(\theta)\), para \(\theta\leq\tan\theta\) ver áreas del triángulo exterior
+        \end{enumerate}
+\end{sol}
 \end{ans}
 
 
 
 \begin{prob}
-    Sea \(x_n\) una sucesión. Demuestre que \(\lim_{n\rightarrow\infty}x_n=0\) si y solo si para todo \(k\in\set{R}\) \(\lim_{n\rightarrow\infty}k\cdot x_n=0\).
+    Demuestre que si \(\lim_{n\rightarrow\infty}x_n=\infty\), entonces \(\lim_{n\rightarrow\infty}\frac1{x_n}=0\). ¿Es verdad el recíproco? Si lo es, demuestrelo, si no lo es, encuentre condiciones necesarias y suficientes.
 \end{prob}
 
 \begin{ans}
@@ -58,28 +72,29 @@
 
 
 
+
 \begin{prob}
-    Sea \(x_n\) tal que \(\lim_{n\rightarrow\infty}x_n=0\), y sea \(y_n\) una sucesión acotada, demuestre que \(\lim_{n\rightarrow\infty}x_ny_n=0\).
+    Sea \(x_n\) una sucesión de enteros que converge a \(L\), demuestre que \(x_n\) es eventualmente constante.
 \end{prob}
 
 \begin{ans}
     \begin{sol}
 
-    \end{sol}
+\end{sol}
 \end{ans}
 
 
-
 \begin{prob}
-    Sea \(x_n\) tal que \(x_n\neq0\) para todo \(n\in\set{N}\). Demuestre que si \(\lim_{n\rightarrow\infty}x_n=0\), entonces \(\frac1{x_n}\) no está acotada.
+    Demuestre que \(\lim_{n\rightarrow\infty}x_n=L\) si y solo si \(\lim_{n\rightarrow\infty}y_n=0\), donde \(y_n=x_n-L\).
 \end{prob}
 
 \begin{ans}
     \begin{sol}
 
-    \end{sol}
+\end{sol}
 \end{ans}
 
 \end{document}
+
 
 
