@@ -25,14 +25,17 @@ title: Índice
 
 
 # Otros
-## Dudas Corrección I1/T1
-Se designará un modulo de la semana para responder dudas de la corrección, por favor respondan el siguiente doodle para definir el horario. [Doodle](https://doodle.com/poll/hu9scs24vsk4mpdu)
+## Ayudantía repaso
+El día jueves 22 será de ayudantía de repaso, les pido que traigan dudas preparadas, ya que toda la ayudantía será para responder dudas.
 
 ## Soluciones Ayudantías
-Las soluciones de las ayudantías 11,12,13 y 14 estarán subidas entre el viernes 16 y el domingo 18. Cualquier duda sobre un problema en especifico por favor consultar, haré un esfuerzo de subir antes las soluciones de los problemas que me pidan.
+Las soluciones de las ayudantías 11, 12, 13 y 14 estarán subidas entre el viernes 16 y el domingo 18. Cualquier duda sobre un problema en especifico por favor consultar, haré un esfuerzo de subir antes las soluciones de los problemas que me pidan.
 
 ## Grabaciones Ayudantías
 Estarán subidas entre el jueves 15 y el viernes 16 al drive con el material del curso.
+
+## Dudas Corrección I1/T1
+Por falta de respuesta no se designo un modulo para dudas de corrección.
 
 
 [Acerca de](about)
