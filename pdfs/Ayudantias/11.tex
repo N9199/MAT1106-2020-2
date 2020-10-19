@@ -34,7 +34,11 @@
 
 \begin{ans}
     \begin{sol}
-
+        Se recuerda la definición de que \(x_n\) no este acotada superiormente
+        \begin{equation*}
+            \forall M\in\set{R}\exists n\in\set{N}:x_n>M
+        \end{equation*}
+        Sea \(M\in\set{R}\), por definición existe un \(n\in\set{N}\) tal que \(M<x_n\leq y_n\), por lo que \(y_n\) no es acotada superiormente.
     \end{sol}
 \end{ans}
 
@@ -46,7 +50,15 @@
 
 \begin{ans}
     \begin{sol}
-
+        Sea \(w=\frac{x+y}2=x+\frac{y-x}2\), se ve que se tienen las siguientes desigualdades:
+        \begin{equation*}
+            \floor{nx}\leq nx<\floor{nx}+1\leq nx+1
+        \end{equation*}
+        Y al dividir por \(n\) se tiene
+        \begin{equation*}
+            \frac{\floor{nx}}{n}\leq x<\frac{\floor{nx}+1}{n}\leq x+\frac1{n}
+        \end{equation*}
+        Ahora, por propiedad arquimediana se tiene que existe un \(n\in\set{N}\) tal que \(\frac1n<y-x\), por lo que \(x+\frac1n<y\), entonces \(x<\frac{\floor{nx}+1}n<y\) y \(\frac{\floor{nx}+1}n\in\set{Q}\).
     \end{sol}
 \end{ans}
 
@@ -54,14 +66,24 @@
 \begin{prob}
     Demuestre que la sucesión
     \begin{equation*}
-        x_n=\sum_{k=1}^n\frac1n
+        x_n=\sum_{k=1}^n\frac1k
     \end{equation*}
     cumple que \(x_{2^n}\geq\frac{n+1}2\) para todo \(n\in\set{N}\).
 \end{prob}
 
 \begin{ans}
     \begin{sol}
-
+        Por inducción, para \(n=0\) se tiene que \(x_1=1\geq\frac{0+1}2\). Para el paso inductivo, se ve lo siguiente:
+        \begin{align*}
+            x_{2^n} & =\sum_{k=1}^{2^n}\frac1k                                     \\
+                    & =\sum_{k=1}^{2^{n-1}}\frac1k+\sum_{k=2^{n-1}+1}^{2^n}\frac1k \\
+                    & =x_{2^{n-1}}+\sum_{k=2^{n-1}+1}^{2^n}\frac1k                 \\
+                    & \geq \frac{(n-1)+1}2+\sum_{k=2^{n-1}+1}^{2^n}\frac1k         \\
+                    & \geq \frac{(n-1)+1}2+\sum_{k=2^{n-1}+1}^{2^n}\frac1{2^n}     \\
+                    & \geq \frac{(n-1)+1}2+2^{n-1}\cdot\frac1{2^n}                 \\
+                    & \geq \frac{(n-1)+1}2+\frac12                                 \\
+                    & \geq \frac{n+1}2                                             \\
+        \end{align*}
     \end{sol}
 \end{ans}
 
@@ -72,7 +94,12 @@
 
 \begin{ans}
     \begin{sol}
-
+        Se nota que toda sucesión creciente es acotada inferiormente, por lo que \(x_n\) es no acotada superiormente. Se recuerda la definición de ser creciente y de no acotada superiormente:
+        \begin{align*}
+            \text{Creciente:}                & \qquad\forall n\in\set{N} \qquad x_n\leq x_{n+1}          \\
+            \text{No acotada superiormente:} & \qquad\forall M\in\set{R}\exists n\in\set{N} \qquad x_n>M
+        \end{align*}
+        Por lo que dado un \(R>0\) existe un \(n_0\in\set{N}\) tal que \(x_{n_0}>R\), más aún para \(n\geq n_0\) se tiene que \(x_n\geq x_{n_0}>R\). Por lo que se tiene que \(\lim_{n\rightarrow\infty}x_n=\infty\).
     \end{sol}
 \end{ans}
 
@@ -88,7 +115,9 @@
 
 \begin{ans}
     \begin{sol}
+        Se ve que \(s_{n+1}-s_n=x_{n+1}>0\) por lo que \(s_n\) es creciente.
 
+        Si \(x_n>\varepsilon\) entonces \(s_n=\sum_{k\leq n}x_k\geq\sum_{k\leq n}\varepsilon\geq n\varepsilon\), por ayudantía anterior se tiene que \(\lim_{n\rightarrow\infty}n\varepsilon=\infty\) y por otra ayudantía anterior se tiene que \(\lim_{n\rightarrow\infty}s_n=\infty\).
     \end{sol}
 \end{ans}
 

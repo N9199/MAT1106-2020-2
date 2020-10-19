@@ -5,9 +5,9 @@
 \course{MAT1106 --- Introducción al Cálculo}
 
 % Comment for final compile
-\ifx\condition\undefined
-\def\condition{1}
-\fi
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
 
 \ifx\condition\undefined
 \immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
@@ -34,19 +34,21 @@
 
 \begin{ans}
     \begin{sol}
+        \(\impliedby\) Es trivial tomando \(k=1\).
 
-\end{sol}
+        \(\implies\) Sea \(R>0\), se nota que \(\frac{R}k>0\), por lo que existe un \(n_0\in\set{N}\) tal que para \(n\geq n_0\) se tiene que \(x_n>\frac{R}k\), o equivalentemente \(k\cdot x_n>R\), lo que nos da que \(\lim_{n\rightarrow\infty}\).
+    \end{sol}
 \end{ans}
 
 
 \begin{prob}
-    Demuestre que si \(\lim_{n\rightarrow\infty}x_n=\infty\), entonces \(\frac1{x_n}\) está acotada inferiormente.
+    Demuestre que si \(\lim_{n\rightarrow\infty}x_n=\infty\)y \(x_n\neq0\), entonces \(\frac1{x_n}\) está acotada inferiormente.
 \end{prob}
 
 \begin{ans}
     \begin{sol}
-
-\end{sol}
+        Sea \(R=1>0\), se tiene que existe un \(n_0\in\set{N}\) tal que para \(n\geq n_0\) se tiene \(x_n>1>0\), más específicamente se tiene que \(1>\frac1{x_n}>0\). Ahora, sea \(m=\min(\{0\}\cup\{x_n:n<n_0\})\)\footnote{Esto está bien definido ya que \(\{0\}\cup\{x_n:n<n_0\}\) es un conjunto no vacío y es finito.}, se nota que para \(n<n_0\) \(x_n>m\) y que para \(n\geq n_)\) se tiene que \(x_n>0\geq m\), por lo que se tiene que \(x_n\) está acotada inferiormente por \(m\).
+    \end{sol}
 \end{ans}
 
 
@@ -56,8 +58,13 @@
 
 \begin{ans}
     \begin{sol}
-
-\end{sol}
+        Se ve la siguiente factorización:
+        \begin{align*}
+            \frac1{\sqrt{n^3}-\sqrt{n^3-1}}&=\frac1{\sqrt{n^3}-\sqrt{n^3-1}}\cdot\frac{\sqrt{n^3}+\sqrt{n^3-1}}{\sqrt{n^3}+\sqrt{n^3-1}}\\
+            &=\sqrt{n^3}+\sqrt{n^3-1}\\
+        \end{align*}
+        Como \(\sqrt{n^3-1}\geq0\) y \(\sqrt{n^3}\geq n\), se tiene que \(x_n\geq n\), y por ayudantía anterior al tenerse que \(\lim_{n\rightarrow}n=\infty\) se tiene que \(\lim_{n\rightarrow\infty}x_n=\infty\).
+    \end{sol}
 \end{ans}
 
 
@@ -65,18 +72,31 @@
     Sea \(L_n\) definida como
     \begin{equation*}
         L_n=\begin{cases}
-            2 &\text{si }n=1\\
-            1 &\text{si }n=2\\
-            L_{n-1}+L_{n-2} &\text{si }n>2\\
+            2               & \text{si }n=1 \\
+            1               & \text{si }n=2 \\
+            L_{n-1}+L_{n-2} & \text{si }n>2 \\
         \end{cases}
     \end{equation*}
-    Demuestre que \(L_n\rightarrow\infty\) 
+    Demuestre que \(L_n\rightarrow\infty\)
 \end{prob}
 
 \begin{ans}
     \begin{sol}
-
-\end{sol}
+        Se demuestra por inducción que \(L_n\geq n-1\), para \(n<4\) se ve lo siguiente:
+        \begin{align*}
+            L_1&=2\geq0\\
+            L_2&=1\geq1\\
+            L_3&=3\geq2\\
+        \end{align*}
+        Luego para \(L_n\) se ve
+        \begin{align*}
+            L_n&=L_{n-1}+L_{n-2}\\
+            L_n&\geq n-2+n-3\\
+            L_n&\geq 2n-5\\
+            L_n&\geq n-1,
+        \end{align*}
+        la última desigualdad se tiene porque \(n\geq 4\). Ahora por ayudantia anterior se tiene que \(\lim_{n\rightarrow\infty}L_n=\infty\).
+    \end{sol}
 \end{ans}
 
 
@@ -88,7 +108,7 @@
 \begin{ans}
     \begin{sol}
 
-\end{sol}
+    \end{sol}
 \end{ans}
 
 \end{document}

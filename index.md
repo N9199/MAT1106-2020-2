@@ -18,8 +18,8 @@ title: Índice
 - Ayudantía 08 (Monotonía y Subsucesiones) - [Enunciado](pdfs/Enunciados/Enunciado08.pdf) - [Solución](pdfs/Soluciones/Solucion08.pdf)
 - Ayudantía 09 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado09.pdf) - [Solución](pdfs/Soluciones/Solucion09.pdf)
 - Ayudantía 10 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado10.pdf) - [Solución](pdfs/Soluciones/Solucion10.pdf)
-- Ayudantía 11 (Sucesiones, ACD y Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado11.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion11.pdf) -->
-- Ayudantía 12 (Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado12.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion12.pdf) -->
+- Ayudantía 11 (Sucesiones, ACD y Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado11.pdf) - [Solución](pdfs/Soluciones/Solucion11.pdf)
+- Ayudantía 12 (Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado12.pdf) - [Solución](pdfs/Soluciones/Solucion12.pdf)
 - Ayudantía 13 (Límites al cero) - [Enunciado](pdfs/Enunciados/Enunciado13.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion13.pdf) -->
 - Ayudantía 14 (Límites) - [Enunciado](pdfs/Enunciados/Enunciado14.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion14.pdf) -->
 
@@ -29,10 +29,10 @@ title: Índice
 El día jueves 22 será de ayudantía de repaso, les pido que traigan dudas preparadas, ya que toda la ayudantía será para responder dudas.
 
 ## Soluciones Ayudantías
-Las soluciones de las ayudantías 11, 12, 13 y 14 estarán subidas entre el viernes 16 y el domingo 18. Cualquier duda sobre un problema en especifico por favor consultar, haré un esfuerzo de subir antes las soluciones de los problemas que me pidan.
-
-## Grabaciones Ayudantías
-Estarán subidas entre el jueves 15 y el viernes 16 al drive con el material del curso.
+Los siguientes problemas aún no tienen solución subida:
+- Problema 5 Ayudantía 12
+- Ayudantía 13
+- Ayudantía 14
 
 ## Dudas Corrección I1/T1
 Por falta de respuesta no se designo un modulo para dudas de corrección.
