@@ -1,0 +1,92 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 15}
+\date{2020-10-20}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+
+\begin{prob}
+    \begin{enumerate}[label=(\alph*)]
+        \item Demuestre que \(\lim_{n\rightarrow\infty}\sqrt{1-\frac1{n^2}}=1\)
+        \item Demuestre que \(\lim_{n\rightarrow\infty}\cos\paren{\frac1n}=1\)
+        \item Demuestre que \(\lim_{n\rightarrow\infty}n\sin\paren{\frac1n}=1\)
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea \(x_n\) una sucesión, se define \(c_n\) de la siguiente forma
+    \begin{equation*}
+        c_n=\frac{x_1+x_2+\ldots+x_n}n.
+    \end{equation*}
+    Demuestre que si \(x_n\rightarrow L\) entonces \(c_n\rightarrow L\)
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea \(x_n\) una sucesión convergente y \(\varepsilon>0\), demuestre que existe una subsucesión \(x_{n_k}\) tal que para todo \(k\in\set{N}\) se tiene
+    \begin{equation*}
+        \abs{x_{n_k}-x_{n_{k+1}}}<\varepsilon.
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sea \(x_n\) una sucesión tal que \(x_n\rightarrow L\) con \(L\neq0\), demuestre que eventualmente \(x_n\) tiene el mismo signo.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+\end{document}
+
+
+
+
