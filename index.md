@@ -20,7 +20,7 @@ title: Índice
 - Ayudantía 10 (Sucesiones y Cotas) - [Enunciado](pdfs/Enunciados/Enunciado10.pdf) - [Solución](pdfs/Soluciones/Solucion10.pdf)
 - Ayudantía 11 (Sucesiones, ACD y Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado11.pdf) - [Solución](pdfs/Soluciones/Solucion11.pdf)
 - Ayudantía 12 (Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado12.pdf) - [Solución](pdfs/Soluciones/Solucion12.pdf)
-- Ayudantía 13 (Límites al cero) - [Enunciado](pdfs/Enunciados/Enunciado13.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion13.pdf) -->
+- Ayudantía 13 (Límites al cero) - [Enunciado](pdfs/Enunciados/Enunciado13.pdf) - [Solución](pdfs/Soluciones/Solucion13.pdf)
 - Ayudantía 14 (Límites) - [Enunciado](pdfs/Enunciados/Enunciado14.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion14.pdf) -->
 
 
@@ -31,7 +31,6 @@ El día jueves 22 será de ayudantía de repaso, les pido que traigan dudas prep
 ## Soluciones Ayudantías
 Los siguientes problemas aún no tienen solución subida:
 - Problema 5 Ayudantía 12
-- Ayudantía 13
 - Ayudantía 14
 
 ## Dudas Corrección I1/T1
