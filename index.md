@@ -22,12 +22,12 @@ title: Índice
 - Ayudantía 12 (Límites al infinito) - [Enunciado](pdfs/Enunciados/Enunciado12.pdf) - [Solución](pdfs/Soluciones/Solucion12.pdf)
 - Ayudantía 13 (Límites al cero) - [Enunciado](pdfs/Enunciados/Enunciado13.pdf) - [Solución](pdfs/Soluciones/Solucion13.pdf)
 - Ayudantía 14 (Límites) - [Enunciado](pdfs/Enunciados/Enunciado14.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion14.pdf) -->
-- Ayudantía 15 (Límites) - [Enunciado](pdfs/Enunciados/Enunciado15.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion15.pdf) -->
+<!-- - Ayudantía 15 (Álgebra de Límites) - [Enunciado](pdfs/Enunciados/Enunciado15.pdf) - [Solución](pdfs/Soluciones/Solucion15.pdf) -->
 
 
 # Otros
 ## Ayudantía repaso
-El día jueves 22 será de ayudantía de repaso, les pido que traigan dudas preparadas, ya que toda la ayudantía será para responder dudas.
+El día martes 20 será de ayudantía de repaso, les pido que traigan dudas preparadas, ya que toda la ayudantía será para responder dudas.
 
 ## Soluciones Ayudantías
 Los siguientes problemas aún no tienen solución subida:

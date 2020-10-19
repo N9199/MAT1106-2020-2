@@ -5,9 +5,11 @@
 \course{MAT1106 --- Introducción al Cálculo}
 
 % Comment for final compile
-%\ifx\condition\undefined
-%\def\condition{1}
-%\fi
+\ifx\condition\undefined
+\def\condition{1}
+\fi
+
+% TODO Change some problems and add more limit algebra problems specifically some that use adding zeroes to use the triangle inequality
 
 \ifx\condition\undefined
 \immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
