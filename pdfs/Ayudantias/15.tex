@@ -1,15 +1,13 @@
 \documentclass{ayudantia}
 \usepackage{multicol}
 \title{Ayudantía 15}
-\date{2020-10-20}
+\date{2020-10-22}
 \course{MAT1106 --- Introducción al Cálculo}
 
 % Comment for final compile
 %\ifx\condition\undefined
 %\def\condition{1}
 %\fi
-
-% TODO Change some problems and add more limit algebra problems specifically some that use adding zeroes to use the triangle inequality
 
 \ifx\condition\undefined
 \immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
@@ -33,9 +31,50 @@
 
 \begin{prob}
     \begin{enumerate}[label=(\alph*)]
-        \item Demuestre que \(\lim_{n\rightarrow\infty}\sqrt{1-\frac1{n^2}}=1\)
-        \item Demuestre que \(\lim_{n\rightarrow\infty}\cos\paren{\frac1n}=1\)
-        \item Demuestre que \(\lim_{n\rightarrow\infty}n\sin\paren{\frac1n}=1\)
+        \item Demuestre que \(\lim_{n\rightarrow\infty}\sqrt{1-\frac1{n^2}}=1\).
+        \item Demuestre que \(\lim_{n\rightarrow\infty}\cos\paren{\frac1n}=1\).
+        \item Demuestre que \(\lim_{n\rightarrow\infty}n\sin\paren{\frac1n}=1\).
+        \item Encuentre el límite de \(\paren{\frac{3n-5}{4+3n}}^5\).
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sean \(x_n\) e \(y_n\) sucesiones tales que \(x_n\rightarrow x\) e \(y_n\rightarrow y\). Demuestre lo siguiente:
+    \begin{enumerate}[label=(\alph*)]
+        \item \((x_n+y_n)\rightarrow x+y\)
+        \item \((x_ny_n)\rightarrow xy\)
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+\begin{prob}
+    Sean \(p(x)=a_kx^k+\ldots+a_0\) y \(q(x)=b_jx^j+\ldots+b_0\), con \(a_k\) y \(b_j\) distintos de \(0\).
+    \begin{enumerate}
+        \item Demuestre que si \(k>j\)
+        \begin{equation*}
+            \lim_{n\rightarrow\infty}\frac{p(n)}{q(n)}=\pm\infty
+        \end{equation*}
+        \item Demuestre que si \(k=j\)
+        \begin{equation*}
+            \lim_{n\rightarrow\infty}\frac{p(n)}{q(n)}=\frac{a_k}{b_j}
+        \end{equation*}
+        \item Demuestre que si \(k<j\)
+        \begin{equation*}
+            \lim_{n\rightarrow\infty}\frac{p(n)}{q(n)}=0
+        \end{equation*}
     \end{enumerate}
 \end{prob}
 
@@ -51,30 +90,14 @@
     Sea \(x_n\) una sucesión convergente y \(\varepsilon>0\), demuestre que existe una subsucesión \(x_{n_k}\) tal que para todo \(k\in\set{N}\) se tiene
     \begin{equation*}
         \abs{x_{n_k}-x_{n_{k+1}}}<\varepsilon.
-    \end{equation*}
-\end{prob}
+    \end{equation*}    
+\end{prob}    
 
 \begin{ans}
     \begin{sol}
 
-    \end{sol}
-\end{ans}
-
-
-\begin{prob}
-    Sean \(0<a<b\) reales. Se definen las sucesiones \(x_n,y_n\) como
-    \begin{equation*}
-        x_1=\sqrt{ab}\qquad y_1=\frac{a+b}2\qquad x_{n+1}=\sqrt{x_ny_n}\qquad y_{n+1}=\frac{x_n+y_n}2.
-    \end{equation*}
-    Demuestre que ambas sucesiones convergen al mismo límite.
-\end{prob}
-
-\begin{ans}
-    \begin{sol}
-
-    \end{sol}
-\end{ans}
-
+    \end{sol}    
+\end{ans}    
 
 \begin{prob}
     Sea \(x_n\) una sucesión. Definimos \(s_n=\sum_{k=1}^nx_k\). Asuma que \(s_n\rightarrow L\) y que \(x_n\) es siempre positiva. Definimos
