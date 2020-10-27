@@ -5,9 +5,9 @@
 \course{MAT1106 --- Introducción al Cálculo}
 
 % Comment for final compile
-%\ifx\condition\undefined
-%\def\condition{1}
-%\fi
+\ifx\condition\undefined
+\def\condition{1}
+\fi
 
 \ifx\condition\undefined
 \immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
@@ -75,38 +75,6 @@
         \begin{equation*}
             \lim_{n\rightarrow\infty}\frac{p(n)}{q(n)}=0
         \end{equation*}
-    \end{enumerate}
-\end{prob}
-
-\begin{ans}
-    \begin{sol}
-
-    \end{sol}
-\end{ans}
-
-
-
-\begin{prob}
-    Sea \(x_n\) una sucesión convergente y \(\varepsilon>0\), demuestre que existe una subsucesión \(x_{n_k}\) tal que para todo \(k\in\set{N}\) se tiene
-    \begin{equation*}
-        \abs{x_{n_k}-x_{n_{k+1}}}<\varepsilon.
-    \end{equation*}    
-\end{prob}    
-
-\begin{ans}
-    \begin{sol}
-
-    \end{sol}    
-\end{ans}    
-
-\begin{prob}
-    Sea \(x_n\) una sucesión. Definimos \(s_n=\sum_{k=1}^nx_k\). Asuma que \(s_n\rightarrow L\) y que \(x_n\) es siempre positiva. Definimos
-    \begin{equation*}
-        r_n=\lim_{m\rightarrow\infty}\sum_{k=n+1}^mx_k.
-    \end{equation*}
-    \begin{enumerate}[label=(\alph*)]
-        \item Encuentre \(r_n\) de manera explicita.
-        \item Demuestre que \(r_n\rightarrow 0\).
     \end{enumerate}
 \end{prob}
 

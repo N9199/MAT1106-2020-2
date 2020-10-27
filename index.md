@@ -4,7 +4,7 @@ title: Índice
 
 # {{page.title}}
 
-**Última actualización: Miercoles 21/10 (Ayudantía 15)**
+**Última actualización: Lunes 26/10 (Ayudantía 16)**
 
 ## Ayudantías
 
@@ -23,13 +23,15 @@ title: Índice
 - Ayudantía 13 (Límites al cero) - [Enunciado](pdfs/Enunciados/Enunciado13.pdf) - [Solución](pdfs/Soluciones/Solucion13.pdf)
 - Ayudantía 14 (Límites) - [Enunciado](pdfs/Enunciados/Enunciado14.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion14.pdf) -->
 - Ayudantía 15 (Álgebra de Límites) - [Enunciado](pdfs/Enunciados/Enunciado15.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion15.pdf) -->
+- Ayudantía 16 (Álgebra de Límites) - [Enunciado](pdfs/Enunciados/Enunciado16.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion16.pdf) -->
 
 
 # Otros
 ## Soluciones Ayudantías
 Los siguientes problemas aún no tienen solución subida:
-- Problema 5 Ayudantía 12
 - Ayudantía 14
+- Ayudantía 15
+- Ayudantía 16
 
 ## Dudas Corrección I1/T1
 Por falta de respuesta no se designo un modulo para dudas de corrección.

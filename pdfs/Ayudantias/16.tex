@@ -1,0 +1,85 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 16}
+\date{2020-10-27}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+\ifx\condition\undefined
+\def\condition{1}
+\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+
+
+\begin{prob}
+    Sea \(x_n=\frac1{n^k}\binom{n}{m}\) con \(k,m\in\set{N}\):
+    \begin{enumerate}[label=(\alph*)]
+        \item Demuestre que si \(k<m\) se tiene que \(x_n\rightarrow\infty\)
+        \item Demuestre que si \(k=m\) se tiene que \(x_n\rightarrow\frac1{m!}\)
+        \item Demuestre que si \(k>m\) se tiene que \(x_n\rightarrow0\)
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea \(x_n\) una sucesión convergente y \(\varepsilon>0\), demuestre que existe una subsucesión \(x_{n_k}\) tal que para todo \(k\in\set{N}\) se tiene
+    \begin{equation*}
+        \abs{x_{n_k}-x_{n_{k+1}}}<\varepsilon.
+    \end{equation*}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+\begin{prob}
+    Sea \(x_n\) una sucesión. Definimos \(s_n=\sum_{k=1}^nx_k\). Asuma que \(s_n\rightarrow L\) y que \(x_n\) es siempre positiva. Definimos
+    \begin{equation*}
+        r_n=\lim_{m\rightarrow\infty}\sum_{k=n+1}^mx_k.
+    \end{equation*}
+    \begin{enumerate}[label=(\alph*)]
+        \item Encuentre \(r_n\) de manera explicita.
+        \item Demuestre que \(r_n\rightarrow 0\).
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+\end{document}
+
+
+
+
+
