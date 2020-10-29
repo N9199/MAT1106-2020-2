@@ -1,0 +1,100 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 17}
+\date{2020-10-29}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Sea \(x_n\) una sucesión de términos no cero tal que \(x_n\rightarrow 0\). Sea
+    \begin{equation*}
+        \lambda_n=\frac{(1+x_n)^k-1}{x_n}
+    \end{equation*}
+    con \(k\in\set{N}\) fijo. Encuentre \(\lim_{n\rightarrow\infty}\lambda_n\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+        
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sean \(a_1,\ldots,a_k\in\set{R}\).
+    \begin{enumerate}[label=(\alph*)]
+        \item Demuestre que \(\sqrt[n]{\abs{a_1}^n+\ldots+\abs{a_k}^n}\leq\max\{\abs{a_1},\ldots,\abs{a_k}\}\).
+        \item Demuestre que \(\lim_{n\rightarrow\infty}\sqrt[n]{\abs{a_1}^n+\ldots+\abs{a_k}^n}=\max\{\abs{a_1},\ldots,\abs{a_k}\}\)
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Considere \(I_n=[a_n,b_n]\), donde \(a_n\) es creciente, \(b_n\) es decreciente y \(a_n\leq b_n\) para todo \(n\). Demuestre que \(\bigcap_{n\in\set{N}}I_n\neq\emptyset\). ¿Qué pasaría si los intervalos fueron abiertos?
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea la sucesión
+    \begin{equation*}
+        \sqrt{k},\sqrt{k+\sqrt{k}},\sqrt{k+\sqrt{k+\sqrt{k}}},\ldots
+    \end{equation*}
+    con \(k\in\set{N}\).
+    \begin{enumerate}[label=(\alph*)]
+        \item Demuestre que si \(k=2\), la sucesión converge.
+        \item Demuestre que la sucesión está acotada para cualquier \(k\in\set{N}\) fijo.
+        \item Encuentre condiciones necesarias y suficientes para que la sucesión converja a un número entero.
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+\end{document}
+
+
+
+
+
+
