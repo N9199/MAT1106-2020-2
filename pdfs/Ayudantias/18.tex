@@ -1,0 +1,78 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 18}
+\date{2020-11-03}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Demuestre que los siguientes conjuntos son cerrados:
+    \begin{enumerate}[label=(\alph*)]
+        \item \(\set{Z}\)
+        \item \(\{\frac1{2^n}\mid n\in\set{N}\}\cup\{0\}\)
+        \item \(\bigcup_{k=1}^nA_k\), donde \(A_1,\ldots, A_n\) finitos subconjuntos cerrados de \(\set{R}\).
+        \item El conjunto de Cantor, \(\mathcal{C}=\bigcap_{n=1}^\infty\mathcal{C}_n\), donde  \(\mathcal{C}_n=\{\frac{x}3\mid x\in\mathcal{C}_{n-1}\}\cup\{\frac23+\frac{x}3\mid x\in\mathcal{C}_{n-1}\}\) y \(\mathcal{C}_0=[0,1]\).
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea \(A\subseteq\set{R}\), se dice que \(A\) es un conjunto abierto si y solo si existe un conjunto cerrado \(B\subseteq\set{R}\) tal que \(A=\set{R}\setminus B\). Demuestre que todo intervalo abierto es abierto. Demuestre además que dado un conjunto abierto \(A\) y un \(a\in A\) existe un intervalo abierto \(I\) tal que \(a\in I\subseteq A\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sean \(A_\alpha\) una colección infinita de subconjuntos cerrados de \(\set{R}\). Demuestre que \(\bigcap A_\alpha\) es un conjunto cerrado. Use lo anterior para demostrar que la unión arbitraria de conjuntos abiertos es abierto.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+\end{document}
+
+
+
+
+
+
+

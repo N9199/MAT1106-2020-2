@@ -24,7 +24,8 @@ title: Índice
 - Ayudantía 14 (Límites) - [Enunciado](pdfs/Enunciados/Enunciado14.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion14.pdf) -->
 - Ayudantía 15 (Álgebra de Límites) - [Enunciado](pdfs/Enunciados/Enunciado15.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion15.pdf) -->
 - Ayudantía 16 (Álgebra de Límites) - [Enunciado](pdfs/Enunciados/Enunciado16.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion16.pdf) -->
-- Ayudantía 17 (Álgebra de Límites) - [Enunciado](pdfs/Enunciados/Enunciado17.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion17.pdf) -->
+- Ayudantía 17 (Álgebra de Límites y Teorema del Sandwich) - [Enunciado](pdfs/Enunciados/Enunciado17.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion17.pdf) -->
+- Ayudantía 18 (Conjuntos cerrados) - [Enunciado](pdfs/Enunciados/Enunciado18.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion18.pdf) -->
 
 
 # Otros
@@ -34,6 +35,7 @@ Los siguientes problemas aún no tienen solución subida:
 - Ayudantía 15
 - Ayudantía 16
 - Ayudantía 17
+- Ayudantía 18
 
 ## Dudas Corrección I1/T1
 Por falta de respuesta no se designo un modulo para dudas de corrección.
