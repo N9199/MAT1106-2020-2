@@ -1,0 +1,84 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 18}
+\date{2020-11-03}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Demuestre que \(0,10100100010000100000\ldots\) es irracional.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sean \(a=0,a_1a_2a_3\ldots\) y \(b=0,b_1b_2b_3\ldots\) reales con expansión decimal periódica de periodos \(k_1\) y \(k_2\) respectivamente, y además \(a_n+b_n\leq 9\) para todo \(n\in\set{N}\). Demuestre que \(a+b\) también es periódica, y encuentre su periodo.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Demuestre que si \(k=\frac{p}q\) (con \(p,q\in\set{N}\)) su expansión decimal tiene periodo a lo más \(k\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    ¿ Cuántas expansiones decimales distintas puede tener un número real?
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+\end{document}
+
+
+
+
+
+
+
+
