@@ -1,0 +1,99 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 22}
+\date{2020-11-17}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+\ifx\condition\undefined
+\def\condition{1}
+\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Demuestre que los siguientes son equivalentes:
+    \begin{itemize}
+        \item \(s\) es el supremo de \(A\).
+        \item Para todo \(\varepsilon>0\) existe un \(a\in A\) tal que \(s-\varepsilon< a\leq s\).
+        \item \(s\) es cota superior de \(A\) y existe una sucesión \(\{x_n\}_{n\in\set{N}}\) de elementos de \(A\) tal que \(x_n\rightarrow s\).
+    \end{itemize}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sean \(A,B\) dos conjuntos de números reales no vacíos, se definen
+    \begin{equation*}
+        A+B=\{a+b\mid a\in A\wedge b\in B\}
+    \end{equation*}
+    Demuestre que \(A+B\) tiene máximo si y solo si \(A\) tiene máximo y \(B\) tiene máximo.
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea \(A\neq\emptyset\) un conjunto de números reales, y sea \(x_n\) una sucesión de cotas superiores de \(A\) que converge a \(L\in A\).
+    \begin{enumerate}
+        \item Demuestre que \(L\) es una cota superior.
+        \item Demuestre que \(L\) es el supremo de \(A\).
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Sea \(f:\set{R}\rightarrow\set{R}\) una función, y sea \(X\) un conjunto no vacío y acotado. ¿Se puede concluir que \(f(X)\) tiene supremo o ínfimo?
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+\end{document}
+
+
+
+
+
+
+
+
+
+

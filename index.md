@@ -28,7 +28,8 @@ title: Índice
 - Ayudantía 18 (Conjuntos cerrados) - [Enunciado](pdfs/Enunciados/Enunciado18.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion18.pdf) -->
 - Ayudantía 19 (Varios)<!--  - [Enunciado](pdfs/Enunciados/Enunciado19.pdf) --><!--  - [Solución](pdfs/Soluciones/Solucion19.pdf) -->
 - Ayudantía 20 (Expansión Decimal) - [Enunciado](pdfs/Enunciados/Enunciado20.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion20.pdf) -->
-- Ayudantía 20 (Densidad y Sucesiones de Cauchy) - [Enunciado](pdfs/Enunciados/Enunciado21.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion21.pdf) -->
+- Ayudantía 21 (Densidad y Sucesiones de Cauchy) - [Enunciado](pdfs/Enunciados/Enunciado21.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion21.pdf) -->
+- Ayudantía 22 (Axioma del Supremo) - [Enunciado](pdfs/Enunciados/Enunciado22.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion22.pdf) -->
 
 
 # Otros
@@ -42,6 +43,7 @@ Los siguientes problemas aún no tienen solución subida:
 - Ayudantía 19
 - Ayudantía 20
 - Ayudantía 21
+- Ayudantía 22
 
 ## Dudas Corrección I1/T1
 Por falta de respuesta no se designo un modulo para dudas de corrección.
