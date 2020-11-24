@@ -30,6 +30,7 @@ title: Índice
 - Ayudantía 20 (Expansión Decimal) - [Enunciado](pdfs/Enunciados/Enunciado20.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion20.pdf) -->
 - Ayudantía 21 (Densidad y Sucesiones de Cauchy) - [Enunciado](pdfs/Enunciados/Enunciado21.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion21.pdf) -->
 - Ayudantía 22 (Axioma del Supremo) - [Enunciado](pdfs/Enunciados/Enunciado22.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion22.pdf) -->
+- Ayudantía 23 (Axioma del Supremo) - [Enunciado](pdfs/Enunciados/Enunciado23.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion23.pdf) -->
 
 
 # Otros
@@ -44,6 +45,7 @@ Los siguientes problemas aún no tienen solución subida:
 - Ayudantía 20
 - Ayudantía 21
 - Ayudantía 22
+- Ayudantía 23
 
 ## Dudas Corrección I1/T1
 Por falta de respuesta no se designo un modulo para dudas de corrección.

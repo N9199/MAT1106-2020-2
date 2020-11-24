@@ -1,0 +1,106 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 23}
+\date{2020-11-24}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+
+Extendiendo la notación vista en clase, se tiene que dada una función \(f:A\rightarrow B\), conjuntos \(C\subseteq A\) y \(D\subseteq B\), se define \(f(C)=\{b\in B\mid \exists c\in C, b=f(c)\}\) y además se define \(f^{-1}(D)=\{a\in A\mid \exists d\in D, f(a)=d\}\). Además, se recuerda las siguientes definiciones dado dos conjuntos \(A\) y \(B\)
+\begin{align*}
+    A\cap B      & =\{x\mid x\in A\wedge x\in B\}                \\
+    A\cup B      & =\{x\mid x\in A\vee x\in B\}                  \\
+    A\setminus B & =\{x\mid x\in A\wedge x\notin B\}             \\
+    A\Delta B    & =\paren{A\setminus B}\cup\paren{B\setminus A} \\
+\end{align*}
+
+\begin{prob}
+    Dado \(f:X\rightarrow Y\), demuestre las siguientes propiedades:
+    \begin{enumerate}
+        \item Dado \(A\subseteq B\subseteq X\) se tiene \(f(A)\subseteq f(B)\).
+        \item Dado \(A\subseteq B\subseteq Y\) se tiene \(f^{-1}(A)\subseteq f^{-1}(B)\).
+        \item Dado \(A\subseteq X\) se tiene \(f^{-1}(f(A))\supseteq A\).
+        \item Dado \(A\subseteq Y\) se tiene \(f^{-1}(f(A))\subseteq A\).
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Se dice que una función \(f:A\subseteq\set{R}\rightarrow\set{R}\) es creciente (estrictamente creciente, decreciente, estrictamente decreciente) si y solo si para todos \(x,y\in A\) si \(x<y\) entonces \(f(x)\leq f(y)\) (\(f(x)<f(y)\), \(f(x)\geq f(y)\), \(f(x)>f(y)\)). Identifique si las siguientes funciones son crecientes, estrictamente crecientes, decrecientes, estrictamente decrecientes o ninguno de las anteriores.
+    \begin{enumerate}
+        \item \(f(x)=x\)
+        \item \(f(x)=x^3\)
+        \item \(f(x)=x^2\)
+        \item \(f(x)=\sqrt{x}\)
+        \item \(f(x)=\max(0,x)\)
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Se dice que una función \(f:\set{R}\rightarrow\set{R}\) es impar (correspondientemente par) si para todo \(x\in\set{R}\) se tiene que \(f(x)=-f(-x)\) (correspondientemente \(f(x)=f(-x)\)). Demuestre las siguientes propiedades:
+    \begin{enumerate}
+        \item Dado \(f,g\) funciones pares \(f+g\) es una función par.
+        \item Dado \(f,g\) funciones impares \(f+g\) es una función impar.
+        \item Una función \(f\) es par e impar si y solo si es idénticamente cero (\(\forall x\in\set{R}f(x)=0\)).
+        \item Dado \(f,g\) funciones pares \(f\cdot g\) es una función par.
+        \item Dado \(f,g\) funciones impares \(f\cdot g\) es una función par.
+        \item Toda función \(f:\set{R}\rightarrow\set{R}\) puede escribirse como la suma de una función par y una función impar.
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
