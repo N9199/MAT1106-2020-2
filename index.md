@@ -34,6 +34,10 @@ title: Índice
 
 
 # Otros
+## Ayudantía Jueves 25
+La ayudantía será haciendo los ejercicios que no se alcanzaron hacer de la ayudantía 23
+
+
 ## Soluciones Ayudantías
 Los siguientes problemas aún no tienen solución subida:
 - Ayudantía 14
