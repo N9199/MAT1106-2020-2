@@ -1,0 +1,74 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 24}
+\date{2020-12-01}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Demuestre que existe una única función \(f:\set{R}\rightarrow\set{R}\) tal que para toda función \(g:\set{R}\rightarrow\set{R}\) se tiene que \(f\circ g=g\circ f\).
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Demuestre las siguientes propiedades de funciones:
+    \begin{enumerate}
+        \item \(f:A\subseteq\set{R}\rightarrow B\set{R}\) es una función biyectiva si y solo si tiene inversa \(f^{-1}:B\subseteq\set{R}\rightarrow A\subseteq\set{R}\) tal que \(\forall x\in B,f\circ f^{-1}(x)=x\) y \(\forall x\in A,f^{-1}\circ f(x)=x\).
+        \item Sean \(f:A\subseteq\set{R}\rightarrow B\subseteq\set{R}\) y \(g:B\subseteq\set{R}\rightarrow C\subseteq\set{R}\) funciones biyectivas, entonces \(g\circ f:A\subseteq\set{R}\rightarrow C\subseteq\set{R}\) es biyectiva.
+        \item Sea \(f:\set{R}\rightarrow\set{R}\) tal que para toda sucesión \(x_n\rightarrow x\) se tiene que \(\lim_{n\rightarrow\infty}f(x_n)=f(\lim_{n\rightarrow\infty}x_n)=f(x)\), demuestre que si \(A\subseteq\set{R}\) es acotado entonces \(f(A)\) es acotado.
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Demuestre que \(f:A\rightarrow\set{R}\) donde \(f(x)=\frac{x}{(x-1)(x+1)}\) es biyectiva si \(A\) es
+    \begin{itemize}
+        \item \((-1,1)\)
+        \item \(\set{R}\setminus[-1,1]\)
+    \end{itemize}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+\end{document}

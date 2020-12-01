@@ -4,7 +4,7 @@ title: Índice
 
 # {{page.title}}
 
-**Última actualización: Miércoles 11/11 (Ayudantía 21)**
+**Última actualización: Lunes 30/11 (Ayudantía 24)**
 
 ## Ayudantías
 
@@ -31,11 +31,12 @@ title: Índice
 - Ayudantía 21 (Densidad y Sucesiones de Cauchy) - [Enunciado](pdfs/Enunciados/Enunciado21.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion21.pdf) -->
 - Ayudantía 22 (Axioma del Supremo) - [Enunciado](pdfs/Enunciados/Enunciado22.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion22.pdf) -->
 - Ayudantía 23 (Funciones) - [Enunciado](pdfs/Enunciados/Enunciado23.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion23.pdf) -->
+- Ayudantía 24 (Funciones) - [Enunciado](pdfs/Enunciados/Enunciado24.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion24.pdf) -->
 
 
 # Otros
 ## Ayudantía Jueves 25
-La ayudantía será haciendo los ejercicios que no se alcanzaron hacer de la ayudantía 23
+La ayudantía será hacer los ejercicios que no se alcanzaron hacer de la ayudantía 23
 
 
 ## Soluciones Ayudantías
@@ -50,6 +51,7 @@ Los siguientes problemas aún no tienen solución subida:
 - Ayudantía 21
 - Ayudantía 22
 - Ayudantía 23
+- Ayudantía 24
 
 ## Dudas Corrección I1/T1
 Por falta de respuesta no se designo un modulo para dudas de corrección.
