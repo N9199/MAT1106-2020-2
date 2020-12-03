@@ -32,6 +32,7 @@ title: Índice
 - Ayudantía 22 (Axioma del Supremo) - [Enunciado](pdfs/Enunciados/Enunciado22.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion22.pdf) -->
 - Ayudantía 23 (Funciones) - [Enunciado](pdfs/Enunciados/Enunciado23.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion23.pdf) -->
 - Ayudantía 24 (Funciones) - [Enunciado](pdfs/Enunciados/Enunciado24.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion24.pdf) -->
+- Ayudantía 25 (Continuidad) - [Enunciado](pdfs/Enunciados/Enunciado25.pdf)<!--  - [Solución](pdfs/Soluciones/Solucion25.pdf) -->
 
 
 # Otros
@@ -52,6 +53,7 @@ Los siguientes problemas aún no tienen solución subida:
 - Ayudantía 22
 - Ayudantía 23
 - Ayudantía 24
+- Ayudantía 25
 
 ## Dudas Corrección I1/T1
 Por falta de respuesta no se designo un modulo para dudas de corrección.

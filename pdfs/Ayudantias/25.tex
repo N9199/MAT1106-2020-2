@@ -1,0 +1,65 @@
+\documentclass{ayudantia}
+\usepackage{multicol}
+\title{Ayudantía 25}
+\date{2020-12-03}
+\course{MAT1106 --- Introducción al Cálculo}
+
+% Comment for final compile
+%\ifx\condition\undefined
+%\def\condition{1}
+%\fi
+
+\ifx\condition\undefined
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Enunciados" --jobname="Enunciado\jobname" "\gdef\string\condition{0} \string\input\space\jobname"} 
+\immediate\write18{ pdflatex -synctex=1 -output-directory="../Soluciones" --jobname="Solucion\jobname" "\gdef\string\condition{1} \string\input\space\jobname"} 
+
+\immediate\write18{ cd "../Enunciados" && rm *.aux *.log *.out}
+\immediate\write18{ cd "../Soluciones" && rm *.aux *.log *.out}
+
+\expandafter\stop
+\fi
+
+\ifcase\condition
+\excludecomment{ans}
+\or
+\includecomment{ans}
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{prob}
+    Dado una función \(f:A\subseteq\set{R}\rightarrow \set{R}\) y un \(c\in A\) demuestre que las siguientes definiciones son equivalentes:
+    \begin{enumerate}
+        \item Para todo abierto \(N(f(c))\subseteq \set{R}\) que contiene a \(f(c)\) existe un abierto \(N(c)\subseteq A\) que contiene a \(c\) tal que para todo \(x\in N(C)\) se tiene que \(f(x)\in N(f(c))\).
+        \item Para toda sucesión \(\{x_n\}_{n\in\set{N}}\subseteq A\) que converge a \(c\) se tiene que \(\lim_{n\rightarrow\infty}f(x_n)=f(c)\).
+        \item Para todo \(\varepsilon>0\) existe un \(\delta>0\) tal que para todo \(x\in D\) \(\abs{x-c}<\delta\) implica que \(\abs{f(x)-f(c)}<\varepsilon\).
+    \end{enumerate} 
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+
+\begin{prob}
+    Dado una función \(f:A\subseteq\set{R}\rightarrow \set{R}\) demuestre que las siguientes definiciones son equivalentes:
+    \begin{enumerate}
+        \item Para todo abierto \(V\subseteq\set{R}\) se tiene que \(f^{-1}(V)\) es abierto.
+        \item Para todo cerrado \(V\subseteq\set{R}\) se tiene que \(f^{-1}(V)\) es cerrado.
+        \item Para toda sucesión convergente \(\{x_n\}_{n\in\set{N}}\subseteq A\) se tiene que \(\lim_{n\rightarrow\infty}f(x_n)=f(\lim_{n\rightarrow\infty}x_n)\).
+    \end{enumerate}
+\end{prob}
+
+\begin{ans}
+    \begin{sol}
+
+    \end{sol}
+\end{ans}
+
+
+\end{document}
+
